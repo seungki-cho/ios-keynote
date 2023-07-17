@@ -9,6 +9,6 @@ import Foundation
 
 protocol Rect {
     var id: String { get }
-    var height: Double { get }
+    var height: Int { get }
     var color: SKColor { get }
 }
