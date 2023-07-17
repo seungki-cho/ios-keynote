@@ -23,7 +23,7 @@ struct OneToTen {
         }
     }
     
-    init(wrappedValue iniitalValue: Int) {
-        self.wrappedValue = value
+    init(wrappedValue initialValue: Int) {
+        self.wrappedValue = initialValue
     }
 }
