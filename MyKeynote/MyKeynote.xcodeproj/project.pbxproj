@@ -18,6 +18,7 @@
 		C36375902A64E77800AE6121 /* Square.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363758F2A64E77800AE6121 /* Square.swift */; };
 		C36375922A64EAD100AE6121 /* Rect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36375912A64EAD100AE6121 /* Rect.swift */; };
 		C36375942A64EBE400AE6121 /* SKColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36375932A64EBE400AE6121 /* SKColor.swift */; };
+		C36375962A6526EA00AE6121 /* OneToTen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36375952A6526EA00AE6121 /* OneToTen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		C363758F2A64E77800AE6121 /* Square.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Square.swift; sourceTree = "<group>"; };
 		C36375912A64EAD100AE6121 /* Rect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rect.swift; sourceTree = "<group>"; };
 		C36375932A64EBE400AE6121 /* SKColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKColor.swift; sourceTree = "<group>"; };
+		C36375952A6526EA00AE6121 /* OneToTen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneToTen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 		C363758C2A64E56100AE6121 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				C36375952A6526EA00AE6121 /* OneToTen.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				C36375942A64EBE400AE6121 /* SKColor.swift in Sources */,
 				C36375922A64EAD100AE6121 /* Rect.swift in Sources */,
 				C363755B2A64DF8500AE6121 /* SceneDelegate.swift in Sources */,
+				C36375962A6526EA00AE6121 /* OneToTen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
