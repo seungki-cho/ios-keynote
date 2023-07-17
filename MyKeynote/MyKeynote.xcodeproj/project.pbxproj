@@ -22,6 +22,7 @@
 		C36375982A652B7A00AE6121 /* RectFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36375972A652B7A00AE6121 /* RectFactory.swift */; };
 		C363759C2A6538DA00AE6121 /* IDService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363759B2A6538DA00AE6121 /* IDService.swift */; };
 		C363759E2A6546F500AE6121 /* IDServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363759D2A6546F500AE6121 /* IDServiceProtocol.swift */; };
+		C36375A02A65805900AE6121 /* Logger+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363759F2A65805900AE6121 /* Logger+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		C36375972A652B7A00AE6121 /* RectFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectFactory.swift; sourceTree = "<group>"; };
 		C363759B2A6538DA00AE6121 /* IDService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDService.swift; sourceTree = "<group>"; };
 		C363759D2A6546F500AE6121 /* IDServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDServiceProtocol.swift; sourceTree = "<group>"; };
+		C363759F2A65805900AE6121 /* Logger+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Logger+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 				C36375952A6526EA00AE6121 /* OneToTen.swift */,
 				C363759B2A6538DA00AE6121 /* IDService.swift */,
 				C363759D2A6546F500AE6121 /* IDServiceProtocol.swift */,
+				C363759F2A65805900AE6121 /* Logger+.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C363759C2A6538DA00AE6121 /* IDService.swift in Sources */,
+				C36375A02A65805900AE6121 /* Logger+.swift in Sources */,
 				C36375902A64E77800AE6121 /* Square.swift in Sources */,
 				C363755D2A64DF8500AE6121 /* KeyNoteViewController.swift in Sources */,
 				C36375982A652B7A00AE6121 /* RectFactory.swift in Sources */,
