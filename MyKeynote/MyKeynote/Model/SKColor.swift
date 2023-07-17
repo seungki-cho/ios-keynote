@@ -20,5 +20,5 @@ struct SKColor: CustomStringConvertible {
         self.alpha = alpha
     }
     
-    var description: String { "R:\(red), G:\(green), B:\(blue), Alpha: \(String(format: "%2d", alpha))" }
+    var description: String { "R:\(red), G:\(green), B:\(blue), Alpha:\(String(format: "%2d", alpha))" }
 }
