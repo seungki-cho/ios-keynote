@@ -4,7 +4,7 @@
 ## 계획
 
 <details> 
-<summary>W1</summary>
+<summary>W3</summary>
 
 ### 7/17 월
 - [ ] 프로젝트 생성 및, 프로젝트 설정 - 30분
