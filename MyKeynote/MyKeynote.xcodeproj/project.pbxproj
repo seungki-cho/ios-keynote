@@ -97,11 +97,12 @@
 		C36375572A64DF8500AE6121 /* MyKeynote */ = {
 			isa = PBXGroup;
 			children = (
-				C36375582A64DF8500AE6121 /* AppDelegate.swift */,
-				C363755A2A64DF8500AE6121 /* SceneDelegate.swift */,
+				C363758B2A64E55B00AE6121 /* App */,
+				C36375882A64E54700AE6121 /* Model */,
+				C36375892A64E54C00AE6121 /* View */,
+				C363758A2A64E55300AE6121 /* ViewController */,
 				C363755C2A64DF8500AE6121 /* ViewController.swift */,
-				C36375612A64DF8600AE6121 /* Assets.xcassets */,
-				C36375632A64DF8600AE6121 /* LaunchScreen.storyboard */,
+				C363758C2A64E56100AE6121 /* Util */,
 				C36375662A64DF8600AE6121 /* Info.plist */,
 			);
 			path = MyKeynote;
@@ -122,6 +123,45 @@
 				C363757B2A64DF8600AE6121 /* MyKeynoteUITestsLaunchTests.swift */,
 			);
 			path = MyKeynoteUITests;
+			sourceTree = "<group>";
+		};
+		C36375882A64E54700AE6121 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C36375892A64E54C00AE6121 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C363758A2A64E55300AE6121 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C363758B2A64E55B00AE6121 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C36375582A64DF8500AE6121 /* AppDelegate.swift */,
+				C363755A2A64DF8500AE6121 /* SceneDelegate.swift */,
+				C36375612A64DF8600AE6121 /* Assets.xcassets */,
+				C36375632A64DF8600AE6121 /* LaunchScreen.storyboard */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C363758C2A64E56100AE6121 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
