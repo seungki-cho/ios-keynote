@@ -41,3 +41,13 @@
 - [ ] 리팩토링과 밀렸다면 과제 - 2시간
 
 </details>
+
+## 실행화면
+<details> 
+<summary>W3</summary>
+
+![](https://i.ibb.co/BjSsN49/2023-07-17-11-11-21.png)
+- `Logger`를 사용한 로그
+- 사각형 모델 - 랜덤한 id, 높이, 컬러, alpha를 갖는다.
+-----
+</details>
