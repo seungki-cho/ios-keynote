@@ -7,10 +7,18 @@
 
 import Foundation
 
-class IDService {
+class IDService: IDServiceProtocol {
     static let shared = IDService()
     
-    var IDs: Set<String> = []
+    private var IDs: Set<String> = []
     
     private init() {}
+        
+    func makeNewID() -> String {
+        let randomPool = "abcdefghijklmnopqrstuvwxyz0123456789".map{ String($0) }
+        let randomArary = (0..<3).map { _ in (0..<3).map{ _ in randomPool[Int.random(in: 0..<randomPool.count)] }.joined() }
+        let id = randomArary.joined(separator: "-")
+        IDs.insert(IDs.contains(id) ? makeNewID() : id)
+        return id
+    }
 }
