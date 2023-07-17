@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+protocol IDServiceProtocol {
+    func makeNewID() -> String
+}
