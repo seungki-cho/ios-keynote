@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  KeyNoteViewController.swift
 //  MyKeynote
 //
 //  Created by cho seungki on 2023/07/17.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class KeyNoteViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

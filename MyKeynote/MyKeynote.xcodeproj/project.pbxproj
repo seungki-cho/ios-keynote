@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		C36375592A64DF8500AE6121 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36375582A64DF8500AE6121 /* AppDelegate.swift */; };
 		C363755B2A64DF8500AE6121 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363755A2A64DF8500AE6121 /* SceneDelegate.swift */; };
-		C363755D2A64DF8500AE6121 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363755C2A64DF8500AE6121 /* ViewController.swift */; };
+		C363755D2A64DF8500AE6121 /* KeyNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363755C2A64DF8500AE6121 /* KeyNoteViewController.swift */; };
 		C36375622A64DF8600AE6121 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C36375612A64DF8600AE6121 /* Assets.xcassets */; };
 		C36375652A64DF8600AE6121 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C36375632A64DF8600AE6121 /* LaunchScreen.storyboard */; };
 		C36375702A64DF8600AE6121 /* MyKeynoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363756F2A64DF8600AE6121 /* MyKeynoteTests.swift */; };
@@ -41,7 +41,7 @@
 		C36375552A64DF8500AE6121 /* MyKeynote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyKeynote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C36375582A64DF8500AE6121 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C363755A2A64DF8500AE6121 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C363755C2A64DF8500AE6121 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C363755C2A64DF8500AE6121 /* KeyNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyNoteViewController.swift; sourceTree = "<group>"; };
 		C36375612A64DF8600AE6121 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C36375642A64DF8600AE6121 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C36375662A64DF8600AE6121 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -107,7 +107,6 @@
 				C36375882A64E54700AE6121 /* Model */,
 				C36375892A64E54C00AE6121 /* View */,
 				C363758A2A64E55300AE6121 /* ViewController */,
-				C363755C2A64DF8500AE6121 /* ViewController.swift */,
 				C363758C2A64E56100AE6121 /* Util */,
 				C36375662A64DF8600AE6121 /* Info.plist */,
 			);
@@ -151,6 +150,7 @@
 		C363758A2A64E55300AE6121 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				C363755C2A64DF8500AE6121 /* KeyNoteViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -304,7 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C36375902A64E77800AE6121 /* Square.swift in Sources */,
-				C363755D2A64DF8500AE6121 /* ViewController.swift in Sources */,
+				C363755D2A64DF8500AE6121 /* KeyNoteViewController.swift in Sources */,
 				C36375592A64DF8500AE6121 /* AppDelegate.swift in Sources */,
 				C36375942A64EBE400AE6121 /* SKColor.swift in Sources */,
 				C36375922A64EAD100AE6121 /* Rect.swift in Sources */,
