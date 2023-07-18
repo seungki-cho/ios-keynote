@@ -10,6 +10,7 @@
 		76781CA12A66B4A2006B8B6B /* SlideManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CA02A66B4A2006B8B6B /* SlideManager.swift */; };
 		76781CA32A66B50A006B8B6B /* RectFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CA22A66B50A006B8B6B /* RectFactoryProtocol.swift */; };
 		76781CA52A66C451006B8B6B /* SlideManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CA42A66C451006B8B6B /* SlideManagerProtocol.swift */; };
+		76781CA72A66C8B5006B8B6B /* ControlStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CA62A66C8B5006B8B6B /* ControlStackView.swift */; };
 		C36375592A64DF8500AE6121 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36375582A64DF8500AE6121 /* AppDelegate.swift */; };
 		C363755B2A64DF8500AE6121 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363755A2A64DF8500AE6121 /* SceneDelegate.swift */; };
 		C363755D2A64DF8500AE6121 /* KeyNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363755C2A64DF8500AE6121 /* KeyNoteViewController.swift */; };
@@ -49,6 +50,7 @@
 		76781CA02A66B4A2006B8B6B /* SlideManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideManager.swift; sourceTree = "<group>"; };
 		76781CA22A66B50A006B8B6B /* RectFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectFactoryProtocol.swift; sourceTree = "<group>"; };
 		76781CA42A66C451006B8B6B /* SlideManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideManagerProtocol.swift; sourceTree = "<group>"; };
+		76781CA62A66C8B5006B8B6B /* ControlStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ControlStackView.swift; path = MyKeynote/Model/ControlStackView.swift; sourceTree = SOURCE_ROOT; };
 		C36375552A64DF8500AE6121 /* MyKeynote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyKeynote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C36375582A64DF8500AE6121 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C363755A2A64DF8500AE6121 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 		C36375892A64E54C00AE6121 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				76781CA62A66C8B5006B8B6B /* ControlStackView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				76781CA32A66B50A006B8B6B /* RectFactoryProtocol.swift in Sources */,
 				C363759C2A6538DA00AE6121 /* IDService.swift in Sources */,
 				76781CA12A66B4A2006B8B6B /* SlideManager.swift in Sources */,
+				76781CA72A66C8B5006B8B6B /* ControlStackView.swift in Sources */,
 				C36375A02A65805900AE6121 /* Logger+.swift in Sources */,
 				C36375902A64E77800AE6121 /* Square.swift in Sources */,
 				C363755D2A64DF8500AE6121 /* KeyNoteViewController.swift in Sources */,
@@ -509,6 +513,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5R9YHBW9BJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyKeynote/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -538,6 +543,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5R9YHBW9BJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyKeynote/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
