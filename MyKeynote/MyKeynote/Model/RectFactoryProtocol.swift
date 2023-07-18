@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+protocol RectFactoryProtocol {
+    func makeSquare() -> Square
+}
