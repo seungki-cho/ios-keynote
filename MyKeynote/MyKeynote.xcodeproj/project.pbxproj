@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		76781CA12A66B4A2006B8B6B /* SlideManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CA02A66B4A2006B8B6B /* SlideManager.swift */; };
 		76781CA32A66B50A006B8B6B /* RectFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CA22A66B50A006B8B6B /* RectFactoryProtocol.swift */; };
+		76781CA52A66C451006B8B6B /* SlideManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CA42A66C451006B8B6B /* SlideManagerProtocol.swift */; };
 		C36375592A64DF8500AE6121 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36375582A64DF8500AE6121 /* AppDelegate.swift */; };
 		C363755B2A64DF8500AE6121 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363755A2A64DF8500AE6121 /* SceneDelegate.swift */; };
 		C363755D2A64DF8500AE6121 /* KeyNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363755C2A64DF8500AE6121 /* KeyNoteViewController.swift */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		76781CA02A66B4A2006B8B6B /* SlideManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideManager.swift; sourceTree = "<group>"; };
 		76781CA22A66B50A006B8B6B /* RectFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectFactoryProtocol.swift; sourceTree = "<group>"; };
+		76781CA42A66C451006B8B6B /* SlideManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideManagerProtocol.swift; sourceTree = "<group>"; };
 		C36375552A64DF8500AE6121 /* MyKeynote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyKeynote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C36375582A64DF8500AE6121 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C363755A2A64DF8500AE6121 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				C36375972A652B7A00AE6121 /* RectFactory.swift */,
 				76781CA22A66B50A006B8B6B /* RectFactoryProtocol.swift */,
 				76781CA02A66B4A2006B8B6B /* SlideManager.swift */,
+				76781CA42A66C451006B8B6B /* SlideManagerProtocol.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				C36375592A64DF8500AE6121 /* AppDelegate.swift in Sources */,
 				C36375942A64EBE400AE6121 /* SKColor.swift in Sources */,
 				C36375922A64EAD100AE6121 /* Rect.swift in Sources */,
+				76781CA52A66C451006B8B6B /* SlideManagerProtocol.swift in Sources */,
 				C363755B2A64DF8500AE6121 /* SceneDelegate.swift in Sources */,
 				C36375962A6526EA00AE6121 /* OneToTen.swift in Sources */,
 			);
