@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76781CA12A66B4A2006B8B6B /* SlideManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CA02A66B4A2006B8B6B /* SlideManager.swift */; };
 		C36375592A64DF8500AE6121 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36375582A64DF8500AE6121 /* AppDelegate.swift */; };
 		C363755B2A64DF8500AE6121 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363755A2A64DF8500AE6121 /* SceneDelegate.swift */; };
 		C363755D2A64DF8500AE6121 /* KeyNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363755C2A64DF8500AE6121 /* KeyNoteViewController.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		76781CA02A66B4A2006B8B6B /* SlideManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideManager.swift; sourceTree = "<group>"; };
 		C36375552A64DF8500AE6121 /* MyKeynote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyKeynote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C36375582A64DF8500AE6121 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C363755A2A64DF8500AE6121 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				C36375912A64EAD100AE6121 /* Rect.swift */,
 				C36375932A64EBE400AE6121 /* SKColor.swift */,
 				C36375972A652B7A00AE6121 /* RectFactory.swift */,
+				76781CA02A66B4A2006B8B6B /* SlideManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C363759C2A6538DA00AE6121 /* IDService.swift in Sources */,
+				76781CA12A66B4A2006B8B6B /* SlideManager.swift in Sources */,
 				C36375A02A65805900AE6121 /* Logger+.swift in Sources */,
 				C36375902A64E77800AE6121 /* Square.swift in Sources */,
 				C363755D2A64DF8500AE6121 /* KeyNoteViewController.swift in Sources */,
