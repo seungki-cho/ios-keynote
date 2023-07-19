@@ -9,6 +9,9 @@ import UIKit
 import os
 
 class KeyNoteViewController: UIViewController {
+    enum Constant {
+        static let sideWidth = 200.0
+    }
     //MARK: - UI Property
     
     //MARK: - Property
