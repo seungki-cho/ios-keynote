@@ -20,8 +20,8 @@ class RectFactory: RectFactoryProtocol {
         Square(id: idService.makeNewID(),
                color: SKColor(red: UInt8.random(in: 0...255, using: &randomNumberGenerator),
                               green: UInt8.random(in: 0...255, using: &randomNumberGenerator),
-                              blue: UInt8.random(in: 0...255, using: &randomNumberGenerator),
-                              alpha: Int.random(in: 0...10, using: &randomNumberGenerator)),
+                              blue: UInt8.random(in: 0...255, using: &randomNumberGenerator)),
+               alpha: Int.random(in: 0...10, using: &randomNumberGenerator),
                height: Int.random(in: 100...500, using: &randomNumberGenerator)
         )
     }

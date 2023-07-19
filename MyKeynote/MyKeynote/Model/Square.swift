@@ -11,11 +11,13 @@ class Square: Rect, CustomStringConvertible {
     let id: String
     private(set) var height: Int
     private(set) var color: SKColor
-    var description: String { "(\(id)), Height:\(height), \(color.description)" }
+    @OneToTen private(set) var alpha: Int
+    var description: String { "(\(id)), Height:\(height), \(color.description), Alpha:\(String(format: "%2d", alpha))" }
     
-    init(id: String, color: SKColor, height: Int) {
+    init(id: String, color: SKColor, alpha: Int, height: Int) {
         self.id = id
         self.color = color
+        self.alpha = alpha
         self.height = height
     }
 }
