@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         window = UIWindow(windowScene: windowScene)
-        let viewController = KeyNoteViewController()
+        let viewController = KeyNoteViewController(slideManager: SlideManager(rectFactory: RectFactory(idService: IDService.shared, randomNumberGenerator: SystemRandomNumberGenerator())))
         window?.rootViewController = viewController
         window?.makeKeyAndVisible()
     }
