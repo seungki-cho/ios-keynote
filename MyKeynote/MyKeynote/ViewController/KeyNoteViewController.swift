@@ -25,16 +25,21 @@ class KeyNoteViewController: UIViewController {
     }()
     private let controlStackView = ControlStackView()
     //MARK: - Property
+    let slideManager: SlideManagerProtocol
     
     //MARK: - LifeCycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .green
-        
-        let factory = RectFactory(idService: IDService.shared, randomNumberGenerator: SystemRandomNumberGenerator())
-        
-        (0..<4).forEach { i in
-            Logger.rectModel.log(level: .debug, "Rect\(i) \(factory.makeSquare().description)")
+    init(slideManager: SlideManagerProtocol) {
+        self.slideManager = slideManager
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        let rectFactory = RectFactory(idService: IDService.shared,
+                                      randomNumberGenerator: SystemRandomNumberGenerator())
+        self.slideManager = SlideManager(rectFactory: rectFactory)
+        super.init(coder: coder)
+    }
+    
     override func loadView() {
         super.loadView()
         [backgroundView, canvasView, controlStackView].forEach {
