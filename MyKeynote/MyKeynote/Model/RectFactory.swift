@@ -7,7 +7,7 @@
 
 import Foundation
 
-class RectFactory {
+class RectFactory: RectFactoryProtocol {
     private let idService: IDServiceProtocol
     private var randomNumberGenerator: RandomNumberGenerator
     
