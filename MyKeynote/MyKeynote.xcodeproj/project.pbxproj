@@ -14,6 +14,7 @@
 		76781CA92A66CAAA006B8B6B /* ColorControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CA82A66CAAA006B8B6B /* ColorControlView.swift */; };
 		76781CAB2A6764C8006B8B6B /* AlphaControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CAA2A6764C8006B8B6B /* AlphaControlView.swift */; };
 		76781CB12A6957F8006B8B6B /* Colorful.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CB02A6957F8006B8B6B /* Colorful.swift */; };
+		76781CB32A6967DE006B8B6B /* SKPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CB22A6967DE006B8B6B /* SKPoint.swift */; };
 		C36375592A64DF8500AE6121 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36375582A64DF8500AE6121 /* AppDelegate.swift */; };
 		C363755B2A64DF8500AE6121 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363755A2A64DF8500AE6121 /* SceneDelegate.swift */; };
 		C363755D2A64DF8500AE6121 /* KeyNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363755C2A64DF8500AE6121 /* KeyNoteViewController.swift */; };
@@ -57,6 +58,7 @@
 		76781CA82A66CAAA006B8B6B /* ColorControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorControlView.swift; path = MyKeynote/View/ColorControlView.swift; sourceTree = SOURCE_ROOT; };
 		76781CAA2A6764C8006B8B6B /* AlphaControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlphaControlView.swift; path = MyKeynote/View/AlphaControlView.swift; sourceTree = SOURCE_ROOT; };
 		76781CB02A6957F8006B8B6B /* Colorful.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colorful.swift; sourceTree = "<group>"; };
+		76781CB22A6967DE006B8B6B /* SKPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKPoint.swift; sourceTree = "<group>"; };
 		C36375552A64DF8500AE6121 /* MyKeynote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyKeynote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C36375582A64DF8500AE6121 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C363755A2A64DF8500AE6121 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				C363758F2A64E77800AE6121 /* Square.swift */,
+				76781CB22A6967DE006B8B6B /* SKPoint.swift */,
 				C36375912A64EAD100AE6121 /* Rect.swift */,
 				C36375932A64EBE400AE6121 /* SKColor.swift */,
 				76781CB02A6957F8006B8B6B /* Colorful.swift */,
@@ -352,6 +355,7 @@
 				C36375592A64DF8500AE6121 /* AppDelegate.swift in Sources */,
 				C36375942A64EBE400AE6121 /* SKColor.swift in Sources */,
 				C36375922A64EAD100AE6121 /* Rect.swift in Sources */,
+				76781CB32A6967DE006B8B6B /* SKPoint.swift in Sources */,
 				76781CB12A6957F8006B8B6B /* Colorful.swift in Sources */,
 				76781CA92A66CAAA006B8B6B /* ColorControlView.swift in Sources */,
 				76781CA52A66C451006B8B6B /* SlideManagerProtocol.swift in Sources */,
