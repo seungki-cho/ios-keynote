@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+protocol Colorful {
+    var color: SKColor { get set }
+}
+
+extension Colorful {
+    mutating func changeColor(to color: SKColor) {
+        self.color = color
+    }
+}
