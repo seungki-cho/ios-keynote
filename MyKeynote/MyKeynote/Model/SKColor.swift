@@ -8,10 +8,9 @@
 import Foundation
 
 class SKColor: CustomStringConvertible {
-    #warning("접근제어자?")
-    let red: UInt8
-    let green: UInt8
-    let blue: UInt8
+    private let red: UInt8
+    private let green: UInt8
+    private let blue: UInt8
     
     init(red: UInt8, green: UInt8, blue: UInt8) {
         self.red = red
@@ -20,4 +19,10 @@ class SKColor: CustomStringConvertible {
     }
     
     var description: String { "R:\(red), G:\(green), B:\(blue)" }
+    
+    static func randomOne() -> SKColor {
+        SKColor(red: UInt8.random(in: 0...255),
+                      green: UInt8.random(in: 0...255),
+                      blue: UInt8.random(in: 0...255))
+    }
 }
