@@ -18,15 +18,18 @@ class RectFactory: RectFactoryProtocol {
         self.randomNumberGenerator = randomNumberGenerator
     }
     
-    func make(by type: Rect.Type, photo: Data? = nil) -> Rect {
     func changeMaxPoint(_ point: SKPoint) {
         guard point.x > 0 && point.y > 0 else { return }
         maxPoint = point
     }
+    
+    func make(by type: Rectable.Type, photo: Data? = nil) -> Rectable {
         type.init(id: idService.makeNewID(),
+                  point: SKPoint(x: 1,
+                                 y: 1),
                   height: Int.random(in: 100...500, using: &randomNumberGenerator),
                   alpha: Int.random(in: 0...10, using: &randomNumberGenerator),
                   color: SKColor.randomOne(),
-                  photo: nil)
+                  photo: photo)
     }
 }
