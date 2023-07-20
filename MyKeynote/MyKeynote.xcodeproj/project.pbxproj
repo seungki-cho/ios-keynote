@@ -16,6 +16,7 @@
 		76781CB12A6957F8006B8B6B /* Colorful.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CB02A6957F8006B8B6B /* Colorful.swift */; };
 		76781CB32A6967DE006B8B6B /* SKPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CB22A6967DE006B8B6B /* SKPoint.swift */; };
 		76781CB52A697BBE006B8B6B /* Rect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CB42A697BBE006B8B6B /* Rect.swift */; };
+		76781CB92A69940B006B8B6B /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CB82A69940B006B8B6B /* UIColor+.swift */; };
 		C36375592A64DF8500AE6121 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36375582A64DF8500AE6121 /* AppDelegate.swift */; };
 		C363755B2A64DF8500AE6121 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363755A2A64DF8500AE6121 /* SceneDelegate.swift */; };
 		C363755D2A64DF8500AE6121 /* KeyNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363755C2A64DF8500AE6121 /* KeyNoteViewController.swift */; };
@@ -61,6 +62,7 @@
 		76781CB02A6957F8006B8B6B /* Colorful.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colorful.swift; sourceTree = "<group>"; };
 		76781CB22A6967DE006B8B6B /* SKPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKPoint.swift; sourceTree = "<group>"; };
 		76781CB42A697BBE006B8B6B /* Rect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rect.swift; sourceTree = "<group>"; };
+		76781CB82A69940B006B8B6B /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		C36375552A64DF8500AE6121 /* MyKeynote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyKeynote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C36375582A64DF8500AE6121 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C363755A2A64DF8500AE6121 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				C363759B2A6538DA00AE6121 /* IDService.swift */,
 				C363759D2A6546F500AE6121 /* IDServiceProtocol.swift */,
 				C363759F2A65805900AE6121 /* Logger+.swift */,
+				76781CB82A69940B006B8B6B /* UIColor+.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				76781CA52A66C451006B8B6B /* SlideManagerProtocol.swift in Sources */,
 				C363755B2A64DF8500AE6121 /* SceneDelegate.swift in Sources */,
 				C36375962A6526EA00AE6121 /* OneToTen.swift in Sources */,
+				76781CB92A69940B006B8B6B /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
