@@ -8,5 +8,5 @@
 import Foundation
 
 protocol RectFactoryProtocol {
-    func makeSquare() -> Square
+    func make(by type: Rect.Type, photo: Data?) -> Rect
 }

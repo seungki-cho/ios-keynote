@@ -16,13 +16,11 @@ class RectFactory: RectFactoryProtocol {
         self.randomNumberGenerator = randomNumberGenerator
     }
     
-    func makeSquare() -> Square {
-        Square(id: idService.makeNewID(),
-               color: SKColor(red: UInt8.random(in: 0...255, using: &randomNumberGenerator),
-                              green: UInt8.random(in: 0...255, using: &randomNumberGenerator),
-                              blue: UInt8.random(in: 0...255, using: &randomNumberGenerator)),
-               alpha: Int.random(in: 0...10, using: &randomNumberGenerator),
-               height: Int.random(in: 100...500, using: &randomNumberGenerator)
-        )
+    func make(by type: Rect.Type, photo: Data? = nil) -> Rect {
+        type.init(id: idService.makeNewID(),
+                  height: Int.random(in: 100...500, using: &randomNumberGenerator),
+                  alpha: Int.random(in: 0...10, using: &randomNumberGenerator),
+                  color: SKColor.randomOne(),
+                  photo: nil)
     }
 }
