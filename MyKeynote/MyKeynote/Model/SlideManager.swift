@@ -13,6 +13,7 @@ struct SlideManager: SlideManagerProtocol {
     
     //MARK: - Property
     private var slides: [Rect] = []
+    var count: Int { slides.count }
     
     //MARK: - Lifecycle
     init(rectFactory: RectFactoryProtocol) {
