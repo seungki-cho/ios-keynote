@@ -25,9 +25,9 @@ class RectFactory: RectFactoryProtocol {
     
     func make(by type: Rectable.Type, photo: Data? = nil) -> Rectable {
         type.init(id: idService.makeNewID(),
-                  point: SKPoint(x: 1,
-                                 y: 1),
-                  height: Int.random(in: 100...500, using: &randomNumberGenerator),
+                  point: SKPoint(x: Double.random(in: 0...(maxPoint.x-300), using: &randomNumberGenerator),
+                                 y: Double.random(in: 0...(maxPoint.y-300), using: &randomNumberGenerator)),
+                  height: Int.random(in: 100...300, using: &randomNumberGenerator),
                   alpha: Int.random(in: 0...10, using: &randomNumberGenerator),
                   color: SKColor.randomOne(),
                   photo: photo)
