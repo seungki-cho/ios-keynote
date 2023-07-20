@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol ColorControlViewDelegate: AnyObject {
+    func didTapColorButton()
+}
+
 class ColorControlView: UIView {
     enum Constant {
         static let xMargin = 10.0
@@ -26,8 +30,11 @@ class ColorControlView: UIView {
         button.layer.cornerRadius = Constant.yMargin
         button.setTitle("0xFFFFFF", for: .normal)
         button.setTitleColor(UIColor.black, for: .normal)
+        button.addTarget(self, action: #selector(didTapColorButton(_:)), for: .touchUpInside)
         return button
     }()
+    // MARK: - Property
+    weak var delegate: ColorControlViewDelegate?
     
     // MARK: - Lifecycles
     override init(frame: CGRect) {
@@ -62,5 +69,9 @@ class ColorControlView: UIView {
                                    y: Constant.yMargin * 2 + headerLabel.frame.height,
                                    width: frame.width - Constant.xMargin * 2,
                                    height: frame.height / 2.0 - Constant.yMargin * 2)
+    }
+    
+    @objc private func didTapColorButton(_ sender: UIButton!) {
+        delegate?.didTapColorButton()
     }
 }

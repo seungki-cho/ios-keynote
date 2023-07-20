@@ -7,11 +7,16 @@
 
 import UIKit
 
+protocol ControlStackViewDelegate: AnyObject {
+    func didTapColorButton()
+}
+
 class ControlStackView: UIView {
     // MARK: - UI properties
     private let colorControlView = ColorControlView()
     private let alphaControlView = AlphaControlView()
     // MARK: - Properties
+    weak var delegate: ControlStackViewDelegate?
     
     // MARK: - Lifecycles
     override init(frame: CGRect) {
@@ -29,11 +34,13 @@ class ControlStackView: UIView {
     }
     // MARK: - Helpers
     private func configureUI() {
+        backgroundColor = .systemGray5
         [colorControlView, alphaControlView].forEach {
             addSubview($0)
         }
-        backgroundColor = .systemGray5
+        colorControlView.delegate = self
     }
+    
     func configureFrame() {
         let yMargin = 5.0
         colorControlView.frame = CGRect(x: 0,
@@ -45,5 +52,11 @@ class ControlStackView: UIView {
                                         y: colorControlView.frame.maxY + yMargin,
                                         width: frame.width,
                                         height: frame.width * 9 / 16)
+    }
+}
+
+extension ControlStackView: ColorControlViewDelegate {
+    func didTapColorButton() {
+        delegate?.didTapColorButton()
     }
 }

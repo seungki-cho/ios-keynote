@@ -25,10 +25,11 @@ class AlphaControlView: UIView {
         textField.font = .systemFont(ofSize: 20)
         textField.textAlignment = .right
         textField.backgroundColor = .white
-        textField.layer.cornerRadius = Constant.yMargin
+        textField.layer.cornerRadius = Constant.xMargin
         textField.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
         textField.rightViewMode = .always
         textField.text = "10"
+        textField.keyboardType = .numberPad
         return textField
     }()
     private let alphaStepper = {
@@ -74,6 +75,6 @@ class AlphaControlView: UIView {
                                       height: frame.height / 2.0 - Constant.yMargin * 2)
         alphaStepper.frame.origin = CGPoint(x: alphaTextField.frame.maxX + Constant.xMargin,
                                             y: alphaTextField.frame.minY)
-        alphaStepper.transform = CGAffineTransform(scaleX: 1.35, y: 1.37)
+        alphaStepper.transform = CGAffineTransform(scaleX: 1.33, y: 1.36)
     }
 }
