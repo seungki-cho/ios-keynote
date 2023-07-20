@@ -90,14 +90,9 @@ extension KeyNoteViewController: ControlStackViewDelegate {
 }
 
 extension KeyNoteViewController: UIColorPickerViewControllerDelegate {
-    func colorPickerViewController(
-        _ viewController: UIColorPickerViewController,
-        didSelect color: UIColor,
-        continuously: Bool
-    ) {
-        guard !continuously else { return }
+    func colorPickerViewControllerDidFinish(_ viewController: UIColorPickerViewController) {
         var (red, green, blue): (CGFloat, CGFloat, CGFloat) = (0, 0, 0)
-        color.getRed(&red, green: &green, blue: &blue, alpha: nil)
+        viewController.selectedColor.getRed(&red, green: &green, blue: &blue, alpha: nil)
         
         slideManager.changeColor(for: "a", to: SKColor(red: UInt8(red * 255),
                                                        green: UInt8(green * 255),
