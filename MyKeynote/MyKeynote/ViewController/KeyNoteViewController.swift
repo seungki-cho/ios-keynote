@@ -25,7 +25,7 @@ class KeyNoteViewController: UIViewController {
     }()
     private let controlStackView = ControlStackView()
     //MARK: - Property
-    let slideManager: SlideManagerProtocol
+    var slideManager: SlideManagerProtocol
     
     //MARK: - LifeCycle
     init(slideManager: SlideManagerProtocol) {
