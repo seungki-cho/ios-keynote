@@ -13,6 +13,7 @@ struct SlideManager: SlideManagerProtocol {
     
     //MARK: - Property
     private var slides: [Rectable] = []
+    private var selectedRect: Rectable?
     var count: Int { slides.count }
     
     //MARK: - Lifecycle
@@ -30,13 +31,16 @@ struct SlideManager: SlideManagerProtocol {
         return newRect
     }
     
-    mutating func changeAlpha(for id: String, to alpha: Int) {
-        guard var selectedRect = slides.first(where: { $0.id == id }) else { return }
-        selectedRect.alpha = alpha
+    mutating func changeAlpha(to alpha: Int) {
+        selectedRect?.alpha = alpha
     }
     
-    mutating func changeColor(for id: String, to color: SKColor) {
-        guard var selectedRect = slides.first(where: { $0.id == id }) as? Colorful else { return }
-        selectedRect.color = color
+    mutating func changeColor(to color: SKColor) {
+        guard var rect = selectedRect as? Colorful else { return }
+        rect.color = color
+    }
+    
+    mutating func tapped(at point: SKPoint) {
+        selectedRect = slides.first(where: { $0.contains(point: point) })
     }
 }
