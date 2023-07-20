@@ -46,6 +46,7 @@ class KeyNoteViewController: UIViewController {
             view.addSubview($0)
         }
         view.backgroundColor = .darkGray
+        controlStackView.delegate = self
     }
     
     override func viewSafeAreaInsetsDidChange() {
@@ -76,3 +77,27 @@ class KeyNoteViewController: UIViewController {
     }
 }
 
+extension KeyNoteViewController: ControlStackViewDelegate {
+    func didTapColorButton() {
+        let colorPickerViewController = UIColorPickerViewController()
+        colorPickerViewController.supportsAlpha = false
+        colorPickerViewController.delegate = self
+        present(colorPickerViewController, animated: true)
+    }
+}
+
+extension KeyNoteViewController: UIColorPickerViewControllerDelegate {
+    func colorPickerViewController(
+        _ viewController: UIColorPickerViewController,
+        didSelect color: UIColor,
+        continuously: Bool
+    ) {
+        guard !continuously else { return }
+        var (red, green, blue): (CGFloat, CGFloat, CGFloat) = (0, 0, 0)
+        color.getRed(&red, green: &green, blue: &blue, alpha: nil)
+        
+        slideManager.changeColor(for: "a", to: SKColor(red: UInt8(red * 255),
+                                                       green: UInt8(green * 255),
+                                                       blue: UInt8(blue * 255)))
+    }
+}
