@@ -159,11 +159,11 @@
 		C36375882A64E54700AE6121 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C363758F2A64E77800AE6121 /* Square.swift */,
 				76781CB22A6967DE006B8B6B /* SKPoint.swift */,
-				C36375912A64EAD100AE6121 /* Rectable.swift */,
 				C36375932A64EBE400AE6121 /* SKColor.swift */,
 				76781CB02A6957F8006B8B6B /* Colorful.swift */,
+				C36375912A64EAD100AE6121 /* Rectable.swift */,
+				C363758F2A64E77800AE6121 /* Square.swift */,
 				C36375972A652B7A00AE6121 /* RectFactory.swift */,
 				76781CA22A66B50A006B8B6B /* RectFactoryProtocol.swift */,
 				76781CA02A66B4A2006B8B6B /* SlideManager.swift */,
