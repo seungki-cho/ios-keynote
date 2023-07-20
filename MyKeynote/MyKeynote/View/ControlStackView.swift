@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ControlStackViewDelegate: AnyObject {
-    func didTapColorButton()
+    func colorButtonTapped()
 }
 
 class ControlStackView: UIView {
@@ -56,7 +56,7 @@ class ControlStackView: UIView {
 }
 
 extension ControlStackView: ColorControlViewDelegate {
-    func didTapColorButton() {
-        delegate?.didTapColorButton()
+    func colorButtonTapped() {
+        delegate?.colorButtonTapped()
     }
 }

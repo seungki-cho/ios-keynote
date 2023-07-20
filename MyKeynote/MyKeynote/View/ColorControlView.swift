@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ColorControlViewDelegate: AnyObject {
-    func didTapColorButton()
+    func colorButtonTapped()
 }
 
 class ColorControlView: UIView {
@@ -30,7 +30,7 @@ class ColorControlView: UIView {
         button.layer.cornerRadius = Constant.yMargin
         button.setTitle("0xFFFFFF", for: .normal)
         button.setTitleColor(UIColor.black, for: .normal)
-        button.addTarget(self, action: #selector(didTapColorButton(_:)), for: .touchUpInside)
+        button.addTarget(self, action: #selector(colorButtonTapped(_:)), for: .touchUpInside)
         return button
     }()
     // MARK: - Property
@@ -71,7 +71,7 @@ class ColorControlView: UIView {
                                    height: frame.height / 2.0 - Constant.yMargin * 2)
     }
     
-    @objc private func didTapColorButton(_ sender: UIButton!) {
-        delegate?.didTapColorButton()
+    @objc private func colorButtonTapped(_ sender: UIButton!) {
+        delegate?.colorButtonTapped()
     }
 }

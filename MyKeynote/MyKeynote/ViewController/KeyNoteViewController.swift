@@ -78,7 +78,7 @@ class KeyNoteViewController: UIViewController {
 }
 
 extension KeyNoteViewController: ControlStackViewDelegate {
-    func didTapColorButton() {
+    func colorButtonTapped() {
         let colorPickerViewController = UIColorPickerViewController()
         colorPickerViewController.supportsAlpha = false
         colorPickerViewController.delegate = self
