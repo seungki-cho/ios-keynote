@@ -11,6 +11,7 @@ class Rect: Rectable, Colorful {
     let id: String
     var point: SKPoint
     var height: Int
+    var aspectRatio: Double { 3 / 4 }
     var color: SKColor
     @OneToTen var alpha: Int
     
