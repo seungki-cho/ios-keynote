@@ -21,4 +21,12 @@ extension Rectable {
     func isEqual(with rect: Rectable) -> Bool {
         rect.id == id
     }
+    
+    func getWidth() -> Double {
+        Double(height) * aspectRatio
+    }
+    
+    func contains(point: SKPoint) -> Bool {
+        (self.point.x...getWidth()) ~= point.x && (self.point.y...getWidth()) ~= point.y
+    }
 }
