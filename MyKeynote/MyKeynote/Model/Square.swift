@@ -7,17 +7,22 @@
 
 import Foundation
 
-class Square: Rect, CustomStringConvertible {
+final class Square: Rect, Colorful {
     let id: String
-    private(set) var height: Int
-    private(set) var color: SKColor
-    @OneToTen private(set) var alpha: Int
+    var height: Int
+    var color: SKColor
+    @OneToTen var alpha: Int
+    
     var description: String { "(\(id)), Height:\(height), \(color.description), Alpha:\(String(format: "%2d", alpha))" }
     
-    init(id: String, color: SKColor, alpha: Int, height: Int) {
+    init(id: String, height: Int, alpha: Int, color: SKColor?, photo: Data? = nil) {
         self.id = id
-        self.color = color
-        self.alpha = alpha
         self.height = height
+        self.alpha = alpha
+        self.color = color ?? SKColor.randomOne()
+    }
+    
+    func changeColor(to color: SKColor) {
+        self.color = color
     }
 }
