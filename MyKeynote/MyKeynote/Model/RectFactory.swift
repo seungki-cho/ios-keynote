@@ -23,7 +23,7 @@ class RectFactory: RectFactoryProtocol {
         maxPoint = point
     }
     
-    func make(by type: Rectable.Type, photo: Data? = nil) -> Rectable {
+    func make<T: Rectable>(by type: T.Type, photo: Data? = nil) -> T {
         type.init(id: idService.makeNewID(),
                   point: SKPoint(x: Double.random(in: 0...(maxPoint.x-300), using: &randomNumberGenerator),
                                  y: Double.random(in: 0...(maxPoint.y-300), using: &randomNumberGenerator)),

@@ -25,7 +25,7 @@ struct SlideManager: SlideManagerProtocol {
     subscript(i: Int) -> Rectable? {
         (0..<slides.count) ~= i ? slides[i] : nil
     }
-    mutating func makeRect(by type: Rectable.Type, photo: Data? = nil) -> Rectable {
+    mutating func makeRect<T: Rectable>(by type: T.Type, photo: Data? = nil) -> T {
         let newRect = rectFactory.make(by: type, photo: photo)
         slides.append(newRect)
         return newRect
