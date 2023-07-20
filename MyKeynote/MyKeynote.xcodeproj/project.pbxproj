@@ -24,7 +24,7 @@
 		C363757A2A64DF8600AE6121 /* MyKeynoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36375792A64DF8600AE6121 /* MyKeynoteUITests.swift */; };
 		C363757C2A64DF8600AE6121 /* MyKeynoteUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363757B2A64DF8600AE6121 /* MyKeynoteUITestsLaunchTests.swift */; };
 		C36375902A64E77800AE6121 /* Square.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363758F2A64E77800AE6121 /* Square.swift */; };
-		C36375922A64EAD100AE6121 /* Rect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36375912A64EAD100AE6121 /* Rect.swift */; };
+		C36375922A64EAD100AE6121 /* Rectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36375912A64EAD100AE6121 /* Rectable.swift */; };
 		C36375942A64EBE400AE6121 /* SKColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36375932A64EBE400AE6121 /* SKColor.swift */; };
 		C36375962A6526EA00AE6121 /* OneToTen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36375952A6526EA00AE6121 /* OneToTen.swift */; };
 		C36375982A652B7A00AE6121 /* RectFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36375972A652B7A00AE6121 /* RectFactory.swift */; };
@@ -72,7 +72,7 @@
 		C36375792A64DF8600AE6121 /* MyKeynoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKeynoteUITests.swift; sourceTree = "<group>"; };
 		C363757B2A64DF8600AE6121 /* MyKeynoteUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKeynoteUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C363758F2A64E77800AE6121 /* Square.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Square.swift; sourceTree = "<group>"; };
-		C36375912A64EAD100AE6121 /* Rect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rect.swift; sourceTree = "<group>"; };
+		C36375912A64EAD100AE6121 /* Rectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectable.swift; sourceTree = "<group>"; };
 		C36375932A64EBE400AE6121 /* SKColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKColor.swift; sourceTree = "<group>"; };
 		C36375952A6526EA00AE6121 /* OneToTen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneToTen.swift; sourceTree = "<group>"; };
 		C36375972A652B7A00AE6121 /* RectFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectFactory.swift; sourceTree = "<group>"; };
@@ -161,7 +161,7 @@
 			children = (
 				C363758F2A64E77800AE6121 /* Square.swift */,
 				76781CB22A6967DE006B8B6B /* SKPoint.swift */,
-				C36375912A64EAD100AE6121 /* Rect.swift */,
+				C36375912A64EAD100AE6121 /* Rectable.swift */,
 				C36375932A64EBE400AE6121 /* SKColor.swift */,
 				76781CB02A6957F8006B8B6B /* Colorful.swift */,
 				C36375972A652B7A00AE6121 /* RectFactory.swift */,
@@ -354,7 +354,7 @@
 				C363759E2A6546F500AE6121 /* IDServiceProtocol.swift in Sources */,
 				C36375592A64DF8500AE6121 /* AppDelegate.swift in Sources */,
 				C36375942A64EBE400AE6121 /* SKColor.swift in Sources */,
-				C36375922A64EAD100AE6121 /* Rect.swift in Sources */,
+				C36375922A64EAD100AE6121 /* Rectable.swift in Sources */,
 				76781CB32A6967DE006B8B6B /* SKPoint.swift in Sources */,
 				76781CB12A6957F8006B8B6B /* Colorful.swift in Sources */,
 				76781CA92A66CAAA006B8B6B /* ColorControlView.swift in Sources */,

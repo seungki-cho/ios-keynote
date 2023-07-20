@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class Square: Rect, Colorful {
+final class Square: Rectable, Colorful {
     let id: String
     var height: Int
     var color: SKColor

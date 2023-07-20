@@ -12,7 +12,7 @@ struct SlideManager: SlideManagerProtocol {
     private let rectFactory: RectFactoryProtocol
     
     //MARK: - Property
-    private var slides: [Rect] = []
+    private var slides: [Rectable] = []
     var count: Int { slides.count }
     
     //MARK: - Lifecycle
@@ -21,10 +21,10 @@ struct SlideManager: SlideManagerProtocol {
     }
     
     //MARK: - Helper
-    subscript(i: Int) -> Rect? {
+    subscript(i: Int) -> Rectable? {
         (0..<slides.count) ~= i ? slides[i] : nil
     }
-    mutating func makeRect(by type: Rect.Type, photo: Data? = nil) -> Rect {
+    mutating func makeRect(by type: Rectable.Type, photo: Data? = nil) -> Rectable {
         let newRect = rectFactory.make(by: type, photo: photo)
         slides.append(newRect)
         return newRect
