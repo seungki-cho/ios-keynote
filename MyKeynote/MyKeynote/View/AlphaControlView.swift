@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol AlphaControlViewDelegate: AnyObject {
+    func stepperValueChanged(to value: Double)
+}
+
 class AlphaControlView: UIView {
     enum Constant {
         static let xMargin = 10.0
@@ -37,9 +41,12 @@ class AlphaControlView: UIView {
         stepper.maximumValue = 10
         stepper.stepValue = 1
         stepper.translatesAutoresizingMaskIntoConstraints = false
+        stepper.value = 10
+        stepper.addTarget(self, action: #selector(stepperValueChanged(_:)), for: .valueChanged)
         return stepper
     }()
     // MARK: - Properties
+    weak var delegate: AlphaControlViewDelegate?
     
     // MARK: - Lifecycles
     override init(frame: CGRect) {
@@ -76,5 +83,9 @@ class AlphaControlView: UIView {
         alphaStepper.frame.origin = CGPoint(x: alphaTextField.frame.maxX + Constant.xMargin,
                                             y: alphaTextField.frame.minY)
         alphaStepper.transform = CGAffineTransform(scaleX: 1.33, y: 1.36)
+    }
+    
+    @objc func stepperValueChanged(_ sender: UIStepper!) {
+        delegate?.stepperValueChanged(to: sender.value)
     }
 }

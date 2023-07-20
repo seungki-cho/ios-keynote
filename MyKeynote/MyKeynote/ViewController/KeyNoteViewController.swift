@@ -84,6 +84,9 @@ extension KeyNoteViewController: ControlStackViewDelegate {
         colorPickerViewController.delegate = self
         present(colorPickerViewController, animated: true)
     }
+    
+    func stepperValueChanged(to value: Double) {
+    }
 }
 
 extension KeyNoteViewController: UIColorPickerViewControllerDelegate {

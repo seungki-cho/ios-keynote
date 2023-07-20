@@ -9,6 +9,7 @@ import UIKit
 
 protocol ControlStackViewDelegate: AnyObject {
     func colorButtonTapped()
+    func stepperValueChanged(to value: Double)
 }
 
 class ControlStackView: UIView {
@@ -39,6 +40,7 @@ class ControlStackView: UIView {
             addSubview($0)
         }
         colorControlView.delegate = self
+        alphaControlView.delegate = self
     }
     
     func configureFrame() {
@@ -58,5 +60,11 @@ class ControlStackView: UIView {
 extension ControlStackView: ColorControlViewDelegate {
     func colorButtonTapped() {
         delegate?.colorButtonTapped()
+    }
+}
+
+extension ControlStackView: AlphaControlViewDelegate {
+    func stepperValueChanged(to value: Double) {
+        delegate?.stepperValueChanged(to: value)
     }
 }
