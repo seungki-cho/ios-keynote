@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct SKPoint {
+    let x: Double
+    let y: Double
+}
