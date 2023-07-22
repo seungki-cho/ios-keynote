@@ -33,6 +33,7 @@ class KeyNoteViewController: UIViewController {
     }()
     //MARK: - Property
     var slideManager: SlideManagerProtocol
+    private var selectedRectTag: Int = -1
     
     //MARK: - LifeCycle
     init(slideManager: SlideManagerProtocol) {
