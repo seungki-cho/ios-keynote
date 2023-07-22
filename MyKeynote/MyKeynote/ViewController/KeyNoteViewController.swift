@@ -24,6 +24,13 @@ class KeyNoteViewController: UIViewController {
         return view
     }()
     private let controlStackView = ControlStackView()
+    private let makeRectButton = {
+        let button = UIButton()
+        button.backgroundColor = .red
+        button.setTitle("+", for: .normal)
+        button.setTitleColor(UIColor.green, for: .normal)
+        return button
+    }()
     //MARK: - Property
     var slideManager: SlideManagerProtocol
     
@@ -42,7 +49,7 @@ class KeyNoteViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
-        [backgroundView, canvasView, controlStackView].forEach {
+        [backgroundView, canvasView, controlStackView, makeRectButton].forEach {
             view.addSubview($0)
         }
         view.backgroundColor = .darkGray
@@ -74,6 +81,20 @@ class KeyNoteViewController: UIViewController {
                                         y: safeRect.minY,
                                         width: Constant.sideWidth,
                                         height: view.frame.height - safeRect.minY)
+        makeRectButton.frame = CGRect(x: 0,
+                                      y: safeRect.midY - 50,
+                                      width: 100,
+                                      height: 100)
+    }
+    @objc func newSquareButtonTapped(_ sender: UIButton!) {
+        let square = slideManager.makeRect(by: Square.self)
+        let newView = UIView(frame: CGRect(x: square.point.x,
+                                           y: square.point.y,
+                                           width: square.getWidth(),
+                                           height: Double(square.height)))
+        newView.backgroundColor = UIColor(skColor: square.color, skAlpha: square.alpha)
+        newView.tag = IDService.toInt(square.id)
+        canvasView.addSubview(newView)
     }
 }
 
