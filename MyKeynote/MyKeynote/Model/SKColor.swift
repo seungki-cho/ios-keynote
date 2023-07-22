@@ -8,9 +8,9 @@
 import Foundation
 
 class SKColor: CustomStringConvertible {
-    private let red: UInt8
-    private let green: UInt8
-    private let blue: UInt8
+    let red: UInt8
+    let green: UInt8
+    let blue: UInt8
     
     init(red: UInt8, green: UInt8, blue: UInt8) {
         self.red = red
