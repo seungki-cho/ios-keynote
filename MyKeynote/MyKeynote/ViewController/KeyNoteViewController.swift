@@ -151,8 +151,8 @@ extension KeyNoteViewController: UIColorPickerViewControllerDelegate {
         var (red, green, blue): (CGFloat, CGFloat, CGFloat) = (0, 0, 0)
         viewController.selectedColor.getRed(&red, green: &green, blue: &blue, alpha: nil)
         
-        slideManager.changeColor(for: "a", to: SKColor(red: UInt8(red * 255),
-                                                       green: UInt8(green * 255),
-                                                       blue: UInt8(blue * 255)))
+        slideManager.changeColor(to: SKColor(red: UInt8(red * 255),
+                                             green: UInt8(green * 255),
+                                             blue: UInt8(blue * 255)))
     }
 }
