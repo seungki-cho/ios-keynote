@@ -33,7 +33,7 @@ class KeyNoteViewController: UIViewController {
     }()
     //MARK: - Property
     var slideManager: SlideManagerProtocol
-    private var selectedRectTag: Int = -1
+    private var selectedRectTag: Int?
     
     //MARK: - LifeCycle
     init(slideManager: SlideManagerProtocol) {
@@ -99,27 +99,21 @@ class KeyNoteViewController: UIViewController {
     }
     
     private func bind() {
-        slideManager.alphaChanged = { [weak self] rect in
+        slideManager.changed = { [weak self] rect in
             guard let self, let rect else { return }
             let view = findSubview(tag: IDService.toInt(rect.id))
-            view?.alpha = CGFloat(rect.alpha)/10
-        }
-        
-        slideManager.colorChanged = { [weak self] rect in 
-            guard let self else { return }
-            let view = findSubview(tag: IDService.toInt(rect.id))
-            view?.backgroundColor = UIColor(skColor: rect.color, skAlpha: rect.alpha)
+            view?.changeBackgroundColor(rect.alpha, (rect as? Colorful)?.color)
+            controlStackView.bind(rect.alpha, (rect as? Colorful)?.color)
         }
         
         slideManager.selectedRectDidChanged = { [weak self] rect in
             guard let self else { return }
             let oldView = findSubview(tag: selectedRectTag)
             oldView?.isSelected = false
-            selectedRectTag = -1
-            guard let rect = rect else { return }
-            let view = findSubview(tag: IDService.toInt(rect.id))
+            let view = findSubview(tag: IDService.toInt(rect?.id))
             view?.isSelected = true
-            selectedRectTag = IDService.toInt(rect.id)
+            selectedRectTag = IDService.toInt(rect?.id)
+            controlStackView.bind(rect?.alpha, (rect as? Colorful)?.color)
         }
     }
     @objc func newSquareButtonTapped(_ sender: UIButton!) {
@@ -129,7 +123,7 @@ class KeyNoteViewController: UIViewController {
                                            width: square.getWidth(),
                                            height: Double(square.height)))
         newView.backgroundColor = UIColor(skColor: square.color, skAlpha: square.alpha)
-        newView.tag = IDService.toInt(square.id)
+        newView.tag = IDService.toInt(square.id) ?? 0
         canvasView.addSubview(newView)
     }
     
@@ -139,8 +133,9 @@ class KeyNoteViewController: UIViewController {
                                         y: point.y))
     }
     
-    private func findSubview(tag: Int) -> UIView? {
-        canvasView.viewWithTag(tag)
+    private func findSubview(tag: Int?) -> UIView? {
+        guard let tag else { return nil }
+        return canvasView.viewWithTag(tag)
     }
 }
 
