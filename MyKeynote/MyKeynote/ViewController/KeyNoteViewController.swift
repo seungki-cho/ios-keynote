@@ -54,7 +54,7 @@ class KeyNoteViewController: UIViewController {
             view.addSubview($0)
         }
         view.backgroundColor = .darkGray
-        controlStackView.delegate = self
+        configureEvent()
     }
     
     override func viewSafeAreaInsetsDidChange() {
@@ -67,7 +67,7 @@ class KeyNoteViewController: UIViewController {
         
         let canvasWidth = safeRect.width - Constant.sideWidth * 2
         let canvasHeight = (canvasWidth * 3.0 / 4.0)
-
+        
         canvasView.frame = CGRect(x: Constant.sideWidth,
                                   y: safeRect.minY + (view.frame.height - safeRect.minY - canvasHeight) / 2,
                                   width: canvasWidth,
@@ -82,10 +82,45 @@ class KeyNoteViewController: UIViewController {
                                         y: safeRect.minY,
                                         width: Constant.sideWidth,
                                         height: view.frame.height - safeRect.minY)
+        
         makeRectButton.frame = CGRect(x: 0,
                                       y: safeRect.midY - 50,
                                       width: 100,
                                       height: 100)
+    }
+    
+    private func configureEvent() {
+        controlStackView.delegate = self
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(canvasTapped(sender:)))
+        view.addGestureRecognizer(tapGestureRecognizer)
+        
+        makeRectButton.addTarget(self, action: #selector(newSquareButtonTapped(_:)), for: .touchUpInside)
+        bind()
+    }
+    
+    private func bind() {
+        slideManager.alphaChanged = { [weak self] rect in
+            guard let self, let rect else { return }
+            let view = findSubview(tag: IDService.toInt(rect.id))
+            view?.alpha = CGFloat(rect.alpha)/10
+        }
+        
+        slideManager.colorChanged = { [weak self] rect in 
+            guard let self else { return }
+            let view = findSubview(tag: IDService.toInt(rect.id))
+            view?.backgroundColor = UIColor(skColor: rect.color, skAlpha: rect.alpha)
+        }
+        
+        slideManager.selectedRectDidChanged = { [weak self] rect in
+            guard let self else { return }
+            let oldView = findSubview(tag: selectedRectTag)
+            oldView?.isSelected = false
+            selectedRectTag = -1
+            guard let rect = rect else { return }
+            let view = findSubview(tag: IDService.toInt(rect.id))
+            view?.isSelected = true
+            selectedRectTag = IDService.toInt(rect.id)
+        }
     }
     @objc func newSquareButtonTapped(_ sender: UIButton!) {
         let square = slideManager.makeRect(by: Square.self)
