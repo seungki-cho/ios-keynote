@@ -55,6 +55,11 @@ class ControlStackView: UIView {
                                         width: frame.width,
                                         height: frame.width * 9 / 16)
     }
+    
+    func bind(_ skAlpha: Int? = nil, _ color: SKColor? = nil) {
+        alphaControlView.bind(skAlpha: skAlpha)
+        colorControlView.bind(color)
+    }
 }
 
 extension ControlStackView: ColorControlViewDelegate {
