@@ -17,4 +17,14 @@ extension UIView {
             self.layer.borderColor = UIColor.blue.cgColor
         }
     }
+    
+    func changeBackgroundColor(_ alpha: Int? = nil, _ skColor: SKColor? = nil) {
+        guard let skColor, let alpha else {
+            var alpha: CGFloat = 0.0
+            self.backgroundColor?.getRed(nil, green: nil, blue: nil, alpha: &alpha)
+            self.backgroundColor = UIColor.white.withAlphaComponent(alpha)
+            return
+        }
+        self.backgroundColor = UIColor(skColor: skColor, skAlpha: alpha)
+    }
 }
