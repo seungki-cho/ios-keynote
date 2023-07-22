@@ -9,12 +9,12 @@ import Foundation
 
 @propertyWrapper
 struct OneToTen {
-    private var value: Int = 0
+    private var value: Int = 1
     var wrappedValue: Int {
         get { value }
         set {
-            if newValue < 0 {
-                self.value = 0
+            if newValue < 1 {
+                self.value = 1
             } else if newValue > 10 {
                 self.value = 10
             } else {

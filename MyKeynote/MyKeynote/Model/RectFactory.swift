@@ -28,7 +28,7 @@ class RectFactory: RectFactoryProtocol {
                   point: SKPoint(x: Double.random(in: 0...(maxPoint.x), using: &randomNumberGenerator),
                                  y: Double.random(in: 0...(maxPoint.y), using: &randomNumberGenerator)),
                   height: Int.random(in: 100...300, using: &randomNumberGenerator),
-                  alpha: Int.random(in: 0...10, using: &randomNumberGenerator),
+                  alpha: Int.random(in: 1...10, using: &randomNumberGenerator),
                   color: SKColor.randomOne(),
                   photo: photo)
     }
