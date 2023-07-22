@@ -8,5 +8,5 @@
 import Foundation
 
 final class Square: Rect {
-    override var aspectRatio: Double { 3 / 4 }
+    override var aspectRatio: Double { 1 }
 }
