@@ -28,9 +28,11 @@ class ColorControlView: UIView {
         let button = UIButton()
         button.backgroundColor = .yellow
         button.layer.cornerRadius = Constant.yMargin
-        button.setTitle("0xFFFFFF", for: .normal)
+        button.setTitle("0x000000", for: .normal)
         button.setTitleColor(UIColor.black, for: .normal)
-        button.addTarget(self, action: #selector(colorButtonTapped(_:)), for: .touchUpInside)
+        button.setTitle("0x000000", for: .disabled)
+        button.setTitleColor(UIColor.black, for: .disabled)
+        button.addTarget(nil, action: #selector(colorButtonTapped(_:)), for: .touchUpInside)
         return button
     }()
     // MARK: - Property
@@ -73,5 +75,17 @@ class ColorControlView: UIView {
     
     @objc private func colorButtonTapped(_ sender: UIButton!) {
         delegate?.colorButtonTapped()
+    }
+    
+    func bind(_ color: SKColor?) {
+        guard let color else {
+            colorButton.isEnabled = false
+            colorButton.backgroundColor = UIColor.white
+            return
+        }
+        colorButton.isEnabled = true
+        colorButton.setTitle(color.toHex(), for: .normal)
+        colorButton.setTitleColor(UIColor(skColor: color.complementaryColor(), skAlpha: 10), for: .normal)
+        colorButton.backgroundColor = UIColor(skColor: color, skAlpha: 10)
     }
 }
