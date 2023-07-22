@@ -32,7 +32,8 @@ class AlphaControlView: UIView {
         textField.layer.cornerRadius = Constant.xMargin
         textField.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
         textField.rightViewMode = .always
-        textField.text = "10"
+        textField.text = "0"
+        textField.isEnabled = false
         textField.keyboardType = .numberPad
         return textField
     }()
@@ -42,7 +43,8 @@ class AlphaControlView: UIView {
         stepper.stepValue = 1
         stepper.translatesAutoresizingMaskIntoConstraints = false
         stepper.value = 10
-        stepper.addTarget(self, action: #selector(stepperValueChanged(_:)), for: .valueChanged)
+        stepper.addTarget(nil, action: #selector(stepperValueChanged(_:)), for: .valueChanged)
+        stepper.isEnabled = false
         return stepper
     }()
     // MARK: - Properties
@@ -85,7 +87,21 @@ class AlphaControlView: UIView {
         alphaStepper.transform = CGAffineTransform(scaleX: 1.33, y: 1.36)
     }
     
+    func bind(skAlpha: Int?) {
+        guard let skAlpha else {
+            alphaTextField.text = "0"
+            alphaTextField.isEnabled = false
+            alphaStepper.isEnabled = false
+            return
+        }
+        alphaTextField.text = "\(skAlpha)"
+        alphaTextField.isEnabled = true
+        alphaStepper.value = Double(skAlpha)
+        alphaStepper.isEnabled = true
+    }
+    
     @objc func stepperValueChanged(_ sender: UIStepper!) {
+        alphaTextField.text = "\(Int(sender.value))"
         delegate?.stepperValueChanged(to: sender.value)
     }
 }
