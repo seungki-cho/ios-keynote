@@ -22,7 +22,7 @@ class IDService: IDServiceProtocol {
         return id
     }
     
-    static func toInt(_ id: String) -> Int {
-        id.hashValue
+    static func toInt(_ id: String?) -> Int? {
+        id?.hashValue
     }
 }
