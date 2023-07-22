@@ -132,6 +132,16 @@ class KeyNoteViewController: UIViewController {
         newView.tag = IDService.toInt(square.id)
         canvasView.addSubview(newView)
     }
+    
+    @objc func canvasTapped(sender: UITapGestureRecognizer) {
+        let point = sender.location(in: canvasView)
+        slideManager.tapped(at: SKPoint(x: point.x,
+                                        y: point.y))
+    }
+    
+    private func findSubview(tag: Int) -> UIView? {
+        canvasView.viewWithTag(tag)
+    }
 }
 
 extension KeyNoteViewController: ControlStackViewDelegate {
@@ -143,6 +153,7 @@ extension KeyNoteViewController: ControlStackViewDelegate {
     }
     
     func stepperValueChanged(to value: Double) {
+        slideManager.changeAlpha(to: Int(value))
     }
 }
 
