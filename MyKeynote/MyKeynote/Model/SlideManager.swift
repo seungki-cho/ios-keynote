@@ -22,8 +22,7 @@ struct SlideManager: SlideManagerProtocol {
     
     //MARK: - Output
     var selectedRectDidChanged: ((Rectable?) -> ())?
-    var alphaChanged: ((Rectable?) -> ())?
-    var colorChanged: ((Rect) -> ())?
+    var changed: ((Rectable?) -> ())?
     
     //MARK: - Lifecycle
     init(rectFactory: RectFactoryProtocol) {
@@ -42,13 +41,13 @@ struct SlideManager: SlideManagerProtocol {
     
     mutating func changeAlpha(to alpha: Int) {
         selectedRect?.alpha = alpha
-        alphaChanged?(selectedRect)
+        changed?(selectedRect)
     }
     
     mutating func changeColor(to color: SKColor) {
         guard let rect = selectedRect as? Rect else { return }
         rect.color = color
-        colorChanged?(rect)
+        changed?(rect)
     }
     
     mutating func tapped(at point: SKPoint) {
