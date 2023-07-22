@@ -14,6 +14,8 @@ protocol SlideManagerProtocol {
     mutating func tapped(at point: SKPoint)
     
     var count: Int { get }
-    
     subscript(i: Int) -> Rectable? { get }
+    
+    var selectedRectDidChanged: ((Rectable?) -> ())? { get set }
+    var changed: ((Rectable?) -> ())? { get set }
 }

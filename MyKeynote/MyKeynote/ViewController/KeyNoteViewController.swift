@@ -117,7 +117,7 @@ class KeyNoteViewController: UIViewController {
         }
     }
     @objc func newSquareButtonTapped(_ sender: UIButton!) {
-        let square = slideManager.makeRect(by: Square.self)
+        let square = slideManager.makeRect(by: Square.self, photo: nil)
         let newView = UIView(frame: CGRect(x: square.point.x,
                                            y: square.point.y,
                                            width: square.getWidth(),
