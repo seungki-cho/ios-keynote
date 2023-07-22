@@ -20,6 +20,12 @@ class SKColor: CustomStringConvertible {
     
     var description: String { "R:\(red), G:\(green), B:\(blue)" }
     
+    func complementaryColor() -> SKColor {
+        SKColor(red: 255 - red,
+                green: 255 - green,
+                blue: 255 - blue)
+    }
+    
     static func randomOne() -> SKColor {
         SKColor(red: UInt8.random(in: 0...255),
                       green: UInt8.random(in: 0...255),
