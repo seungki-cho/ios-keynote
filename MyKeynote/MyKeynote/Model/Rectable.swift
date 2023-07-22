@@ -27,6 +27,6 @@ extension Rectable {
     }
     
     func contains(point: SKPoint) -> Bool {
-        (self.point.x...getWidth()) ~= point.x && (self.point.y...getWidth()) ~= point.y
+        (self.point.x...self.point.x+getWidth()) ~= point.x && (self.point.y...self.point.y+getWidth()) ~= point.y
     }
 }
