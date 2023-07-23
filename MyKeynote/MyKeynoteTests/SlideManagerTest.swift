@@ -90,6 +90,32 @@ final class SlideManagerTest: XCTestCase {
         XCTAssertEqual(selectedRect?.alpha, changingRect?.alpha)
         XCTAssertEqual(rect.alpha, 10)
     }
+    func test_Rectable를Tap하고Color를변경하면_반영된다() {
+        //Given
+        let rect = sut.makeRect(by: Square.self)
+        var selectedRect: Rectable?
+        sut.selectedRectDidChanged = { rect in
+            selectedRect = rect
         }
+        var changingRect: Rectable?
+        sut.changed = { rect in
+            changingRect = rect
+        }
+        //When
+        sut.tapped(at: SKPoint(x: 150, y: 150))
+        sut.changeColor(to: SKColor(red: 85, green: 170, blue: 255))
+        //Then
+        let selectedRectColor = (selectedRect as? Colorful)?.color
+        let changingRectColor = (changingRect as? Colorful)?.color
+        
+        XCTAssertEqual(rect.color.red, selectedRectColor?.red)
+        XCTAssertEqual(rect.color.green, selectedRectColor?.green)
+        XCTAssertEqual(rect.color.blue, selectedRectColor?.blue)
+        XCTAssertEqual(selectedRectColor?.red, changingRectColor?.red)
+        XCTAssertEqual(selectedRectColor?.green, changingRectColor?.green)
+        XCTAssertEqual(selectedRectColor?.blue, changingRectColor?.blue)
+        XCTAssertEqual(rect.color.red, 85)
+        XCTAssertEqual(rect.color.green, 170)
+        XCTAssertEqual(rect.color.blue, 255)
     }
 }
