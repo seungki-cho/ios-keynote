@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7651B5FF2A6BDF250098B75D /* SlideManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CA02A66B4A2006B8B6B /* SlideManager.swift */; };
+		7651B6002A6BDF250098B75D /* SKPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CB22A6967DE006B8B6B /* SKPoint.swift */; };
+		7651B6012A6BDF250098B75D /* RectFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36375972A652B7A00AE6121 /* RectFactory.swift */; };
+		7651B6022A6BDF250098B75D /* SlideManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CA42A66C451006B8B6B /* SlideManagerProtocol.swift */; };
+		7651B6032A6BDF250098B75D /* SKColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36375932A64EBE400AE6121 /* SKColor.swift */; };
+		7651B6042A6BDF250098B75D /* Rect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CB42A697BBE006B8B6B /* Rect.swift */; };
+		7651B6052A6BDF250098B75D /* Colorful.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CB02A6957F8006B8B6B /* Colorful.swift */; };
+		7651B6062A6BDF250098B75D /* Square.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363758F2A64E77800AE6121 /* Square.swift */; };
+		7651B6072A6BDF250098B75D /* Rectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36375912A64EAD100AE6121 /* Rectable.swift */; };
+		7651B6082A6BDF250098B75D /* RectFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CA22A66B50A006B8B6B /* RectFactoryProtocol.swift */; };
+		7651B6092A6BDF340098B75D /* IDService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363759B2A6538DA00AE6121 /* IDService.swift */; };
+		7651B60A2A6BDF340098B75D /* IDServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363759D2A6546F500AE6121 /* IDServiceProtocol.swift */; };
+		7651B60C2A6BED750098B75D /* MockRectFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651B60B2A6BED750098B75D /* MockRectFactory.swift */; };
 		76781CA12A66B4A2006B8B6B /* SlideManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CA02A66B4A2006B8B6B /* SlideManager.swift */; };
 		76781CA32A66B50A006B8B6B /* RectFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CA22A66B50A006B8B6B /* RectFactoryProtocol.swift */; };
 		76781CA52A66C451006B8B6B /* SlideManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CA42A66C451006B8B6B /* SlideManagerProtocol.swift */; };
@@ -23,7 +36,7 @@
 		C363755D2A64DF8500AE6121 /* KeyNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363755C2A64DF8500AE6121 /* KeyNoteViewController.swift */; };
 		C36375622A64DF8600AE6121 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C36375612A64DF8600AE6121 /* Assets.xcassets */; };
 		C36375652A64DF8600AE6121 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C36375632A64DF8600AE6121 /* LaunchScreen.storyboard */; };
-		C36375702A64DF8600AE6121 /* MyKeynoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363756F2A64DF8600AE6121 /* MyKeynoteTests.swift */; };
+		C36375702A64DF8600AE6121 /* SlideManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363756F2A64DF8600AE6121 /* SlideManagerTest.swift */; };
 		C363757A2A64DF8600AE6121 /* MyKeynoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36375792A64DF8600AE6121 /* MyKeynoteUITests.swift */; };
 		C363757C2A64DF8600AE6121 /* MyKeynoteUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363757B2A64DF8600AE6121 /* MyKeynoteUITestsLaunchTests.swift */; };
 		C36375902A64E77800AE6121 /* Square.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363758F2A64E77800AE6121 /* Square.swift */; };
@@ -54,6 +67,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7651B60B2A6BED750098B75D /* MockRectFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRectFactory.swift; sourceTree = "<group>"; };
 		76781CA02A66B4A2006B8B6B /* SlideManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideManager.swift; sourceTree = "<group>"; };
 		76781CA22A66B50A006B8B6B /* RectFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectFactoryProtocol.swift; sourceTree = "<group>"; };
 		76781CA42A66C451006B8B6B /* SlideManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideManagerProtocol.swift; sourceTree = "<group>"; };
@@ -73,7 +87,7 @@
 		C36375642A64DF8600AE6121 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C36375662A64DF8600AE6121 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C363756B2A64DF8600AE6121 /* MyKeynoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyKeynoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C363756F2A64DF8600AE6121 /* MyKeynoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKeynoteTests.swift; sourceTree = "<group>"; };
+		C363756F2A64DF8600AE6121 /* SlideManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideManagerTest.swift; sourceTree = "<group>"; };
 		C36375752A64DF8600AE6121 /* MyKeynoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyKeynoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C36375792A64DF8600AE6121 /* MyKeynoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKeynoteUITests.swift; sourceTree = "<group>"; };
 		C363757B2A64DF8600AE6121 /* MyKeynoteUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKeynoteUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -148,7 +162,8 @@
 		C363756E2A64DF8600AE6121 /* MyKeynoteTests */ = {
 			isa = PBXGroup;
 			children = (
-				C363756F2A64DF8600AE6121 /* MyKeynoteTests.swift */,
+				7651B60B2A6BED750098B75D /* MockRectFactory.swift */,
+				C363756F2A64DF8600AE6121 /* SlideManagerTest.swift */,
 			);
 			path = MyKeynoteTests;
 			sourceTree = "<group>";
@@ -380,7 +395,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C36375702A64DF8600AE6121 /* MyKeynoteTests.swift in Sources */,
+				7651B60A2A6BDF340098B75D /* IDServiceProtocol.swift in Sources */,
+				7651B6092A6BDF340098B75D /* IDService.swift in Sources */,
+				7651B6042A6BDF250098B75D /* Rect.swift in Sources */,
+				7651B6002A6BDF250098B75D /* SKPoint.swift in Sources */,
+				7651B6022A6BDF250098B75D /* SlideManagerProtocol.swift in Sources */,
+				C36375702A64DF8600AE6121 /* SlideManagerTest.swift in Sources */,
+				7651B6032A6BDF250098B75D /* SKColor.swift in Sources */,
+				7651B6012A6BDF250098B75D /* RectFactory.swift in Sources */,
+				7651B6062A6BDF250098B75D /* Square.swift in Sources */,
+				7651B5FF2A6BDF250098B75D /* SlideManager.swift in Sources */,
+				7651B60C2A6BED750098B75D /* MockRectFactory.swift in Sources */,
+				7651B6052A6BDF250098B75D /* Colorful.swift in Sources */,
+				7651B6082A6BDF250098B75D /* RectFactoryProtocol.swift in Sources */,
+				7651B6072A6BDF250098B75D /* Rectable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
