@@ -70,6 +70,25 @@ final class SlideManagerTest: XCTestCase {
         //Then
         XCTAssertNil(selectedRect)
     }
+    
+    func test_Rectable를Tap하고Alpha를변경하면_반영된다() {
+        //Given
+        let rect = sut.makeRect(by: Square.self)
+        var selectedRect: Rectable?
+        sut.selectedRectDidChanged = { rect in
+            selectedRect = rect
+        }
+        var changingRect: Rectable?
+        sut.changed = { rect in
+            changingRect = rect
+        }
+        //When
+        sut.tapped(at: SKPoint(x: 150, y: 150))
+        sut.changeAlpha(to: 10)
+        //Then
+        XCTAssertEqual(rect.alpha, selectedRect?.alpha)
+        XCTAssertEqual(selectedRect?.alpha, changingRect?.alpha)
+        XCTAssertEqual(rect.alpha, 10)
     }
         }
     }
