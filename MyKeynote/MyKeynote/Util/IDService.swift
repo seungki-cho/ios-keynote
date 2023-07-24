@@ -21,4 +21,8 @@ class IDService: IDServiceProtocol {
         IDs.insert(IDs.contains(id) ? makeNewID() : id)
         return id
     }
+    
+    static func toInt(_ id: String?) -> Int? {
+        id?.hashValue
+    }
 }

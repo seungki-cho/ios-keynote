@@ -19,18 +19,18 @@
 
 ### 7/18 화
 
-- [ ] ⭐️KWDC⭐️
+- [x] ⭐️KWDC⭐️
 
 
 ### 7/19 수
-- [ ] 입력과 출력을 구분할 SlideManager 설계 - 30분
-- [ ] SlideManager 구조체 생성 - 10분
-- [ ] ColorPickerController 사용법 공부 - 10분
-- [ ] 🖌️ 투명도, 배경색 변경 UI - 30분
-- [ ] 투명도, 배경색 입출력 흐름 구현 - 20분
-- [ ] 옵저버 패턴 공부 및 정리 - 30분
+- [x] 입력과 출력을 구분할 SlideManager 설계 - 30분 (7/19 11:20 ~ 7/20 21:00)
+- [x]] SlideManager 구조체 생성 - 10분 (7/19 11:20 ~ 7/20 21:00)
+- [x] ColorPickerController 사용법 공부 - 10분 (7/19 11:00)
+- [x] 🖌️ 투명도, 배경색 변경 UI - 30분 - (7/19 11:10)
+- [x] 투명도, 배경색 입출력 흐름 구현 - 20분 - (7/20 11:07)
 
 ### 7/20 목
+- [ ] 옵저버 패턴 공부 및 정리 - 30분
 - [ ] M - VC 간의 관계를 Notification Center로 변경 - 30분
 - [ ] TableViewDataSource 공부및 정리 - 30분
 - [ ] 🖌️ Custom TableViewCell - 30분 
@@ -46,8 +46,13 @@
 <details> 
 <summary>W3</summary>
 
+(7/17 23:00)
 ![](https://i.ibb.co/BjSsN49/2023-07-17-11-11-21.png)
 - `Logger`를 사용한 로그
 - 사각형 모델 - 랜덤한 id, 높이, 컬러, alpha를 갖는다.
 -----
+(7/23 23:00)
+![](https://i.ibb.co/5nGwDJK/Simulator-Screen-Recording-i-Pad-Pro-11-inch-4th-generation-2023-07-24-at-10-20-31.gif)
+- 선택 후 배경색, 투명도 조절 가능
+- 빈 영역 터치 시 선택 해제
 </details>

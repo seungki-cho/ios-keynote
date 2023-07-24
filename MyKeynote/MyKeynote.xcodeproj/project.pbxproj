@@ -7,16 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7651B5FF2A6BDF250098B75D /* SlideManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CA02A66B4A2006B8B6B /* SlideManager.swift */; };
+		7651B6002A6BDF250098B75D /* SKPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CB22A6967DE006B8B6B /* SKPoint.swift */; };
+		7651B6012A6BDF250098B75D /* RectFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36375972A652B7A00AE6121 /* RectFactory.swift */; };
+		7651B6022A6BDF250098B75D /* SlideManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CA42A66C451006B8B6B /* SlideManagerProtocol.swift */; };
+		7651B6032A6BDF250098B75D /* SKColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36375932A64EBE400AE6121 /* SKColor.swift */; };
+		7651B6042A6BDF250098B75D /* Rect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CB42A697BBE006B8B6B /* Rect.swift */; };
+		7651B6052A6BDF250098B75D /* Colorful.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CB02A6957F8006B8B6B /* Colorful.swift */; };
+		7651B6062A6BDF250098B75D /* Square.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363758F2A64E77800AE6121 /* Square.swift */; };
+		7651B6072A6BDF250098B75D /* Rectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36375912A64EAD100AE6121 /* Rectable.swift */; };
+		7651B6082A6BDF250098B75D /* RectFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CA22A66B50A006B8B6B /* RectFactoryProtocol.swift */; };
+		7651B6092A6BDF340098B75D /* IDService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363759B2A6538DA00AE6121 /* IDService.swift */; };
+		7651B60A2A6BDF340098B75D /* IDServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363759D2A6546F500AE6121 /* IDServiceProtocol.swift */; };
+		7651B60C2A6BED750098B75D /* MockRectFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651B60B2A6BED750098B75D /* MockRectFactory.swift */; };
+		7651B60D2A6D131B0098B75D /* OneToTen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36375952A6526EA00AE6121 /* OneToTen.swift */; };
+		76781CA12A66B4A2006B8B6B /* SlideManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CA02A66B4A2006B8B6B /* SlideManager.swift */; };
+		76781CA32A66B50A006B8B6B /* RectFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CA22A66B50A006B8B6B /* RectFactoryProtocol.swift */; };
+		76781CA52A66C451006B8B6B /* SlideManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CA42A66C451006B8B6B /* SlideManagerProtocol.swift */; };
+		76781CA72A66C8B5006B8B6B /* ControlStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CA62A66C8B5006B8B6B /* ControlStackView.swift */; };
+		76781CA92A66CAAA006B8B6B /* ColorControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CA82A66CAAA006B8B6B /* ColorControlView.swift */; };
+		76781CAB2A6764C8006B8B6B /* AlphaControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CAA2A6764C8006B8B6B /* AlphaControlView.swift */; };
+		76781CB12A6957F8006B8B6B /* Colorful.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CB02A6957F8006B8B6B /* Colorful.swift */; };
+		76781CB32A6967DE006B8B6B /* SKPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CB22A6967DE006B8B6B /* SKPoint.swift */; };
+		76781CB52A697BBE006B8B6B /* Rect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CB42A697BBE006B8B6B /* Rect.swift */; };
+		76781CB92A69940B006B8B6B /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CB82A69940B006B8B6B /* UIColor+.swift */; };
+		76781CBB2A6997B4006B8B6B /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CBA2A6997B4006B8B6B /* UIView+.swift */; };
 		C36375592A64DF8500AE6121 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36375582A64DF8500AE6121 /* AppDelegate.swift */; };
 		C363755B2A64DF8500AE6121 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363755A2A64DF8500AE6121 /* SceneDelegate.swift */; };
 		C363755D2A64DF8500AE6121 /* KeyNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363755C2A64DF8500AE6121 /* KeyNoteViewController.swift */; };
 		C36375622A64DF8600AE6121 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C36375612A64DF8600AE6121 /* Assets.xcassets */; };
 		C36375652A64DF8600AE6121 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C36375632A64DF8600AE6121 /* LaunchScreen.storyboard */; };
-		C36375702A64DF8600AE6121 /* MyKeynoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363756F2A64DF8600AE6121 /* MyKeynoteTests.swift */; };
+		C36375702A64DF8600AE6121 /* SlideManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363756F2A64DF8600AE6121 /* SlideManagerTest.swift */; };
 		C363757A2A64DF8600AE6121 /* MyKeynoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36375792A64DF8600AE6121 /* MyKeynoteUITests.swift */; };
 		C363757C2A64DF8600AE6121 /* MyKeynoteUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363757B2A64DF8600AE6121 /* MyKeynoteUITestsLaunchTests.swift */; };
 		C36375902A64E77800AE6121 /* Square.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363758F2A64E77800AE6121 /* Square.swift */; };
-		C36375922A64EAD100AE6121 /* Rect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36375912A64EAD100AE6121 /* Rect.swift */; };
+		C36375922A64EAD100AE6121 /* Rectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36375912A64EAD100AE6121 /* Rectable.swift */; };
 		C36375942A64EBE400AE6121 /* SKColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36375932A64EBE400AE6121 /* SKColor.swift */; };
 		C36375962A6526EA00AE6121 /* OneToTen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36375952A6526EA00AE6121 /* OneToTen.swift */; };
 		C36375982A652B7A00AE6121 /* RectFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36375972A652B7A00AE6121 /* RectFactory.swift */; };
@@ -43,6 +68,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7651B60B2A6BED750098B75D /* MockRectFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRectFactory.swift; sourceTree = "<group>"; };
+		76781CA02A66B4A2006B8B6B /* SlideManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideManager.swift; sourceTree = "<group>"; };
+		76781CA22A66B50A006B8B6B /* RectFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectFactoryProtocol.swift; sourceTree = "<group>"; };
+		76781CA42A66C451006B8B6B /* SlideManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideManagerProtocol.swift; sourceTree = "<group>"; };
+		76781CA62A66C8B5006B8B6B /* ControlStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ControlStackView.swift; path = MyKeynote/View/ControlStackView.swift; sourceTree = SOURCE_ROOT; };
+		76781CA82A66CAAA006B8B6B /* ColorControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorControlView.swift; path = MyKeynote/View/ColorControlView.swift; sourceTree = SOURCE_ROOT; };
+		76781CAA2A6764C8006B8B6B /* AlphaControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlphaControlView.swift; path = MyKeynote/View/AlphaControlView.swift; sourceTree = SOURCE_ROOT; };
+		76781CB02A6957F8006B8B6B /* Colorful.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colorful.swift; sourceTree = "<group>"; };
+		76781CB22A6967DE006B8B6B /* SKPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKPoint.swift; sourceTree = "<group>"; };
+		76781CB42A697BBE006B8B6B /* Rect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rect.swift; sourceTree = "<group>"; };
+		76781CB82A69940B006B8B6B /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		76781CBA2A6997B4006B8B6B /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		C36375552A64DF8500AE6121 /* MyKeynote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyKeynote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C36375582A64DF8500AE6121 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C363755A2A64DF8500AE6121 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,12 +88,12 @@
 		C36375642A64DF8600AE6121 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C36375662A64DF8600AE6121 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C363756B2A64DF8600AE6121 /* MyKeynoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyKeynoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C363756F2A64DF8600AE6121 /* MyKeynoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKeynoteTests.swift; sourceTree = "<group>"; };
+		C363756F2A64DF8600AE6121 /* SlideManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideManagerTest.swift; sourceTree = "<group>"; };
 		C36375752A64DF8600AE6121 /* MyKeynoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyKeynoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C36375792A64DF8600AE6121 /* MyKeynoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKeynoteUITests.swift; sourceTree = "<group>"; };
 		C363757B2A64DF8600AE6121 /* MyKeynoteUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKeynoteUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C363758F2A64E77800AE6121 /* Square.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Square.swift; sourceTree = "<group>"; };
-		C36375912A64EAD100AE6121 /* Rect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rect.swift; sourceTree = "<group>"; };
+		C36375912A64EAD100AE6121 /* Rectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectable.swift; sourceTree = "<group>"; };
 		C36375932A64EBE400AE6121 /* SKColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKColor.swift; sourceTree = "<group>"; };
 		C36375952A6526EA00AE6121 /* OneToTen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneToTen.swift; sourceTree = "<group>"; };
 		C36375972A652B7A00AE6121 /* RectFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectFactory.swift; sourceTree = "<group>"; };
@@ -126,7 +163,8 @@
 		C363756E2A64DF8600AE6121 /* MyKeynoteTests */ = {
 			isa = PBXGroup;
 			children = (
-				C363756F2A64DF8600AE6121 /* MyKeynoteTests.swift */,
+				7651B60B2A6BED750098B75D /* MockRectFactory.swift */,
+				C363756F2A64DF8600AE6121 /* SlideManagerTest.swift */,
 			);
 			path = MyKeynoteTests;
 			sourceTree = "<group>";
@@ -143,10 +181,16 @@
 		C36375882A64E54700AE6121 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C363758F2A64E77800AE6121 /* Square.swift */,
-				C36375912A64EAD100AE6121 /* Rect.swift */,
+				76781CB22A6967DE006B8B6B /* SKPoint.swift */,
 				C36375932A64EBE400AE6121 /* SKColor.swift */,
+				76781CB02A6957F8006B8B6B /* Colorful.swift */,
+				C36375912A64EAD100AE6121 /* Rectable.swift */,
+				76781CB42A697BBE006B8B6B /* Rect.swift */,
+				C363758F2A64E77800AE6121 /* Square.swift */,
 				C36375972A652B7A00AE6121 /* RectFactory.swift */,
+				76781CA22A66B50A006B8B6B /* RectFactoryProtocol.swift */,
+				76781CA02A66B4A2006B8B6B /* SlideManager.swift */,
+				76781CA42A66C451006B8B6B /* SlideManagerProtocol.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -154,6 +198,9 @@
 		C36375892A64E54C00AE6121 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				76781CA62A66C8B5006B8B6B /* ControlStackView.swift */,
+				76781CA82A66CAAA006B8B6B /* ColorControlView.swift */,
+				76781CAA2A6764C8006B8B6B /* AlphaControlView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -184,6 +231,8 @@
 				C363759B2A6538DA00AE6121 /* IDService.swift */,
 				C363759D2A6546F500AE6121 /* IDServiceProtocol.swift */,
 				C363759F2A65805900AE6121 /* Logger+.swift */,
+				76781CB82A69940B006B8B6B /* UIColor+.swift */,
+				76781CBA2A6997B4006B8B6B /* UIView+.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -318,17 +367,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76781CA32A66B50A006B8B6B /* RectFactoryProtocol.swift in Sources */,
 				C363759C2A6538DA00AE6121 /* IDService.swift in Sources */,
+				76781CAB2A6764C8006B8B6B /* AlphaControlView.swift in Sources */,
+				76781CB52A697BBE006B8B6B /* Rect.swift in Sources */,
+				76781CA12A66B4A2006B8B6B /* SlideManager.swift in Sources */,
+				76781CA72A66C8B5006B8B6B /* ControlStackView.swift in Sources */,
 				C36375A02A65805900AE6121 /* Logger+.swift in Sources */,
 				C36375902A64E77800AE6121 /* Square.swift in Sources */,
+				76781CBB2A6997B4006B8B6B /* UIView+.swift in Sources */,
 				C363755D2A64DF8500AE6121 /* KeyNoteViewController.swift in Sources */,
 				C36375982A652B7A00AE6121 /* RectFactory.swift in Sources */,
 				C363759E2A6546F500AE6121 /* IDServiceProtocol.swift in Sources */,
 				C36375592A64DF8500AE6121 /* AppDelegate.swift in Sources */,
 				C36375942A64EBE400AE6121 /* SKColor.swift in Sources */,
-				C36375922A64EAD100AE6121 /* Rect.swift in Sources */,
+				C36375922A64EAD100AE6121 /* Rectable.swift in Sources */,
+				76781CB32A6967DE006B8B6B /* SKPoint.swift in Sources */,
+				76781CB12A6957F8006B8B6B /* Colorful.swift in Sources */,
+				76781CA92A66CAAA006B8B6B /* ColorControlView.swift in Sources */,
+				76781CA52A66C451006B8B6B /* SlideManagerProtocol.swift in Sources */,
 				C363755B2A64DF8500AE6121 /* SceneDelegate.swift in Sources */,
 				C36375962A6526EA00AE6121 /* OneToTen.swift in Sources */,
+				76781CB92A69940B006B8B6B /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,7 +396,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C36375702A64DF8600AE6121 /* MyKeynoteTests.swift in Sources */,
+				7651B60A2A6BDF340098B75D /* IDServiceProtocol.swift in Sources */,
+				7651B6092A6BDF340098B75D /* IDService.swift in Sources */,
+				7651B6042A6BDF250098B75D /* Rect.swift in Sources */,
+				7651B6002A6BDF250098B75D /* SKPoint.swift in Sources */,
+				7651B6022A6BDF250098B75D /* SlideManagerProtocol.swift in Sources */,
+				C36375702A64DF8600AE6121 /* SlideManagerTest.swift in Sources */,
+				7651B6032A6BDF250098B75D /* SKColor.swift in Sources */,
+				7651B6012A6BDF250098B75D /* RectFactory.swift in Sources */,
+				7651B6062A6BDF250098B75D /* Square.swift in Sources */,
+				7651B5FF2A6BDF250098B75D /* SlideManager.swift in Sources */,
+				7651B60C2A6BED750098B75D /* MockRectFactory.swift in Sources */,
+				7651B6052A6BDF250098B75D /* Colorful.swift in Sources */,
+				7651B60D2A6D131B0098B75D /* OneToTen.swift in Sources */,
+				7651B6082A6BDF250098B75D /* RectFactoryProtocol.swift in Sources */,
+				7651B6072A6BDF250098B75D /* Rectable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,6 +571,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5R9YHBW9BJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyKeynote/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -526,6 +601,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5R9YHBW9BJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyKeynote/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

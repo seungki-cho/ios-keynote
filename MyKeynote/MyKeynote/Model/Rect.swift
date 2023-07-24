@@ -2,13 +2,26 @@
 //  Rect.swift
 //  MyKeynote
 //
-//  Created by cho seungki on 2023/07/17.
+//  Created by 조승기 on 2023/07/20.
 //
 
 import Foundation
 
-protocol Rect {
-    var id: String { get }
-    var height: Int { get }
-    var color: SKColor { get }
+class Rect: Rectable, Colorful {
+    let id: String
+    var point: SKPoint
+    var height: Int
+    var aspectRatio: Double { 4.0 / 3.0 }
+    var color: SKColor
+    @OneToTen var alpha: Int
+    
+    var description: String { "(\(id)), Height:\(height), \(color.description), Alpha:\(String(format: "%2d", alpha))" }
+    
+    required init(id: String, point: SKPoint, height: Int, alpha: Int, color: SKColor?, photo: Data? = nil) {
+        self.id = id
+        self.point = point
+        self.height = height
+        self.alpha = alpha
+        self.color = color ?? SKColor.randomOne()
+    }
 }
