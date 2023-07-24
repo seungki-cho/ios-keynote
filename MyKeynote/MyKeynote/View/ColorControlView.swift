@@ -26,12 +26,13 @@ class ColorControlView: UIView {
     }()
     private let colorButton = {
         let button = UIButton()
-        button.backgroundColor = .yellow
+        button.backgroundColor = .white
         button.layer.cornerRadius = Constant.yMargin
         button.setTitle("0x000000", for: .normal)
         button.setTitleColor(UIColor.black, for: .normal)
         button.setTitle("0x000000", for: .disabled)
-        button.setTitleColor(UIColor.black, for: .disabled)
+        button.setTitleColor(UIColor.gray, for: .disabled)
+        button.isEnabled = false
         button.addTarget(nil, action: #selector(colorButtonTapped(_:)), for: .touchUpInside)
         return button
     }()
