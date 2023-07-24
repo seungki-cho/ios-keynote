@@ -13,17 +13,13 @@ class KeyNoteViewController: UIViewController {
         static let sideWidth = 200.0
     }
     //MARK: - UI Property
-    private let canvasView = {
-        let view = UIView()
-        view.backgroundColor = .white
-        return view
-    }()
+    private let canvasView = CanvasView()
+    private let controlStackView = ControlStackView()
     private let backgroundView = {
         let view = UIView()
         view.backgroundColor = .systemGray2
         return view
     }()
-    private let controlStackView = ControlStackView()
     private let makeRectButton = {
         let button = UIButton()
         button.backgroundColor = .red
@@ -90,11 +86,8 @@ class KeyNoteViewController: UIViewController {
     }
     
     private func configureEvent() {
+        canvasView.delegate = self
         controlStackView.delegate = self
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(canvasTapped(sender:)))
-        view.addGestureRecognizer(tapGestureRecognizer)
-        
-        makeRectButton.addTarget(self, action: #selector(newSquareButtonTapped(_:)), for: .touchUpInside)
         bind()
     }
     
@@ -116,27 +109,16 @@ class KeyNoteViewController: UIViewController {
             controlStackView.bind(rect?.alpha, (rect as? Colorful)?.color)
         }
     }
-    @objc func newSquareButtonTapped(_ sender: UIButton!) {
-        let square = slideManager.makeRect(by: Square.self, photo: nil)
-        let newView = UIView(frame: CGRect(x: square.point.x,
-                                           y: square.point.y,
-                                           width: square.getWidth(),
-                                           height: Double(square.height)))
-        newView.backgroundColor = UIColor(skColor: square.color, skAlpha: square.alpha)
-        newView.tag = IDService.toInt(square.id) ?? 0
-        canvasView.addSubview(newView)
-    }
-    
-    @objc func canvasTapped(sender: UITapGestureRecognizer) {
-        let point = sender.location(in: canvasView)
-        guard canvasView.bounds.contains(point) else { return }
-        slideManager.tapped(at: SKPoint(x: point.x,
-                                        y: point.y))
-    }
     
     private func findSubview(tag: Int?) -> UIView? {
         guard let tag else { return nil }
         return canvasView.viewWithTag(tag)
+    }
+}
+
+extension KeyNoteViewController: CanvasViewDelegate {
+    func canvasTapped(at point: CGPoint) {
+        slideManager.tapped(at: SKPoint(x: point.x, y: point.y))
     }
 }
 
