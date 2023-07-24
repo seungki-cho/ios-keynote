@@ -51,8 +51,6 @@ struct SlideManager: SlideManagerProtocol {
         changed?(rect)
     }
     
-    mutating func tapped(at point: SKPoint) {
-        selectedRect = slides.last(where: { $0.contains(point: point) })
     mutating func tapped(at point: SKPoint, center: SKPoint) {
         let currentSlide = slides[currentSlideIndex]
         selectedRect = currentSlide.contains(point: point, where: center) ? currentSlide : nil

@@ -11,7 +11,7 @@ protocol SlideManagerProtocol {
     mutating func makeRect<T: Rectable>(by type: T.Type, photo: Data?) -> T
     mutating func changeAlpha(to alpha: Int)
     mutating func changeColor(to color: SKColor)
-    mutating func tapped(at point: SKPoint)
+    mutating func tapped(at point: SKPoint, center: SKPoint)
     
     var count: Int { get }
     subscript(i: Int) -> Rectable? { get }
