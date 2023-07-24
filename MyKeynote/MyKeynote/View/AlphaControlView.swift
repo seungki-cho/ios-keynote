@@ -33,6 +33,7 @@ class AlphaControlView: UIView {
         textField.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
         textField.rightViewMode = .always
         textField.text = "0"
+        textField.textColor = .gray
         textField.isEnabled = false
         textField.keyboardType = .numberPad
         return textField
@@ -40,6 +41,7 @@ class AlphaControlView: UIView {
     private let alphaStepper = {
         let stepper = UIStepper()
         stepper.maximumValue = 10
+        stepper.minimumValue = 1
         stepper.stepValue = 1
         stepper.translatesAutoresizingMaskIntoConstraints = false
         stepper.value = 10
@@ -90,10 +92,12 @@ class AlphaControlView: UIView {
     func bind(skAlpha: Int?) {
         guard let skAlpha else {
             alphaTextField.text = "0"
+            alphaTextField.textColor = .gray
             alphaTextField.isEnabled = false
             alphaStepper.isEnabled = false
             return
         }
+        alphaTextField.textColor = .black
         alphaTextField.text = "\(skAlpha)"
         alphaTextField.isEnabled = true
         alphaStepper.value = Double(skAlpha)
