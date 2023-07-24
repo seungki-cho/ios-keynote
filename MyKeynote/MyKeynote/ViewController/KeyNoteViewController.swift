@@ -20,13 +20,6 @@ class KeyNoteViewController: UIViewController {
         view.backgroundColor = .systemGray2
         return view
     }()
-    private let makeRectButton = {
-        let button = UIButton()
-        button.backgroundColor = .red
-        button.setTitle("+", for: .normal)
-        button.setTitleColor(UIColor.green, for: .normal)
-        return button
-    }()
     //MARK: - Property
     var slideManager: SlideManagerProtocol
     private var selectedRectTag: Int?
@@ -46,7 +39,7 @@ class KeyNoteViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
-        [backgroundView, canvasView, controlStackView, makeRectButton].forEach {
+        [backgroundView, canvasView, controlStackView].forEach {
             view.addSubview($0)
         }
         view.backgroundColor = .darkGray
@@ -78,11 +71,6 @@ class KeyNoteViewController: UIViewController {
                                         y: safeRect.minY,
                                         width: Constant.sideWidth,
                                         height: view.frame.height - safeRect.minY)
-        
-        makeRectButton.frame = CGRect(x: 0,
-                                      y: safeRect.midY - 50,
-                                      width: 100,
-                                      height: 100)
     }
     
     private func configureEvent() {
