@@ -129,6 +129,7 @@ class KeyNoteViewController: UIViewController {
     
     @objc func canvasTapped(sender: UITapGestureRecognizer) {
         let point = sender.location(in: canvasView)
+        guard canvasView.bounds.contains(point) else { return }
         slideManager.tapped(at: SKPoint(x: point.x,
                                         y: point.y))
     }
