@@ -129,9 +129,9 @@ class KeyNoteViewController: UIViewController {
         })
     }
     
-    private func findSubview(tag: Int?) -> UIView? {
+    private func findSlide(with tag: Int?) -> CanvasView? {
         guard let tag else { return nil }
-        return canvasView.viewWithTag(tag)
+        return view.subviews.first { $0.tag == tag } as? CanvasView
     }
 }
 
