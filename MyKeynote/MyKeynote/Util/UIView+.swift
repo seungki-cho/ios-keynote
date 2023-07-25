@@ -18,13 +18,16 @@ extension UIView {
         }
     }
     
-    func changeBackgroundColor(_ alpha: Int? = nil, _ skColor: SKColor? = nil) {
-        guard let skColor, let alpha else {
-            var alpha: CGFloat = 0.0
-            self.backgroundColor?.getRed(nil, green: nil, blue: nil, alpha: &alpha)
-            self.backgroundColor = UIColor.white.withAlphaComponent(alpha)
-            return
-        }
-        self.backgroundColor = UIColor(skColor: skColor, skAlpha: alpha)
+    func changeBackgroundAlpha(to alpha: CGFloat) {
+        var (red, green, blue): (CGFloat, CGFloat, CGFloat) = (0.0, 0.0, 0.0)
+        backgroundColor?.getRed(&red, green: &green, blue: &blue, alpha: nil)
+        backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: alpha)
+        print(alpha)
+    }
+    
+    func changeBackgroundColor(red: CGFloat, green: CGFloat, blue: CGFloat) {
+        var alpha: CGFloat = 1.0
+        backgroundColor?.getRed(nil, green: nil, blue: nil, alpha: &alpha)
+        backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: alpha)
     }
 }
