@@ -23,6 +23,9 @@ class SKColor: CustomStringConvertible {
     func toHex() -> String {
         String(format: "0x%02X%02X%02X", red, green, blue)
     }
+    
+    func toDoubleRgb() -> (Double, Double, Double) {
+        (Double(red) / 255, Double(green) / 255, Double(blue) / 255)
     }
     
     func complementaryColor() -> SKColor {
