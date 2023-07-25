@@ -13,6 +13,7 @@ class KeyNoteViewController: UIViewController {
         static let sideWidth = 200.0
     }
     //MARK: - UI Property
+    private let tableView = UITableView()
     private let canvasView = CanvasView()
     private let controlStackView = ControlStackView()
     private let backgroundView = {
@@ -39,7 +40,7 @@ class KeyNoteViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
-        [backgroundView, canvasView, controlStackView].forEach {
+        [backgroundView, canvasView, controlStackView, tableView].forEach {
             view.addSubview($0)
         }
         view.backgroundColor = .darkGray
@@ -71,11 +72,17 @@ class KeyNoteViewController: UIViewController {
                                         y: safeRect.minY,
                                         width: Constant.sideWidth,
                                         height: view.frame.height - safeRect.minY)
+        
+        tableView.frame = CGRect(x: 0,
+                                 y: safeRect.minY,
+                                 width: Constant.sideWidth,
+                                 height: view.frame.height - safeRect.minY)
     }
     
     private func configureEvent() {
         canvasView.delegate = self
         controlStackView.delegate = self
+        tableView.delegate = self
         bind()
     }
     
@@ -102,6 +109,10 @@ class KeyNoteViewController: UIViewController {
         guard let tag else { return nil }
         return canvasView.viewWithTag(tag)
     }
+}
+
+extension KeyNoteViewController: UITableViewDelegate {
+    
 }
 
 extension KeyNoteViewController: CanvasViewDelegate {
