@@ -141,7 +141,10 @@ extension KeyNoteViewController: UITableViewDelegate {
 
 extension KeyNoteViewController: CanvasViewDelegate {
     func canvasTapped(at point: CGPoint) {
-        slideManager.tapped(at: SKPoint(x: point.x, y: point.y))
+        slideManager.tapped(at: SKPoint(x: point.x,
+                                        y: point.y),
+                            center: SKPoint(x: canvasView.bounds.midX,
+                                            y: canvasView.bounds.midY))
     }
 }
 
