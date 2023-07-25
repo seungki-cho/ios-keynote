@@ -95,12 +95,19 @@ class KeyNoteViewController: UIViewController {
     }
     
     private func bind() {
-        slideManager.changed = { [weak self] rect in
-            guard let self, let rect else { return }
-            let view = findSubview(tag: IDService.toInt(rect.id))
-            view?.changeBackgroundColor(rect.alpha, (rect as? Colorful)?.color)
-            controlStackView.bind(rect.alpha, (rect as? Colorful)?.color)
-        }
+        NotificationCenter.default.addObserver(forName: .selectedRectChanged, object: nil, queue: nil, using: { [weak self] notification in
+            guard let self,
+                  let userInfo = notification.userInfo,
+                  let selectedRect = userInfo["selectedRect"] as? Rectable else {
+                self?.canvasView.changeSelection(to: false)
+                self?.controlStackView.bind(alpha: nil)
+                self?.controlStackView.bind(color: nil)
+                return
+            }
+            canvasView.changeSelection(to: true)
+            controlStackView.bind(alpha: selectedRect.alpha)
+            controlStackView.bind(color: (selectedRect as? Colorful)?.color)
+        })
         
         slideManager.selectedRectDidChanged = { [weak self] rect in
             guard let self else { return }
