@@ -31,4 +31,8 @@ extension Rectable {
         let isYInRange = (center.y - Double(height) / 2)...(center.y + Double(height) / 2) ~= point.y
         return isXInRange && isYInRange
     }
+    
+    mutating func changeAlpha(to alpha: Int) {
+        self.alpha = alpha
+    }
 }
