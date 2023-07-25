@@ -109,15 +109,24 @@ class KeyNoteViewController: UIViewController {
             controlStackView.bind(color: (selectedRect as? Colorful)?.color)
         })
         
-        slideManager.selectedRectDidChanged = { [weak self] rect in
-            guard let self else { return }
-            let oldView = findSubview(tag: selectedRectTag)
-            oldView?.isSelected = false
-            let view = findSubview(tag: IDService.toInt(rect?.id))
-            view?.isSelected = true
-            selectedRectTag = IDService.toInt(rect?.id)
-            controlStackView.bind(rect?.alpha, (rect as? Colorful)?.color)
-        }
+        NotificationCenter.default.addObserver(forName: .slideAlphaChanged, object: nil, queue: nil, using: { [weak self] notification in
+            guard let self,
+                  let userInfo = notification.userInfo,
+                  let rect = userInfo["slide"] as? Rectable else { return }
+            
+            let slide = findSlide(with: rect.id.toInt)
+            slide?.changeAlpha(to: CGFloat(Double(rect.alpha) / 10))
+        })
+        
+        NotificationCenter.default.addObserver(forName: .rectColorChanged, object: nil, queue: nil, using: { [weak self] notification in
+            guard let self,
+                  let userInfo = notification.userInfo,
+                  let rect = userInfo["rect"] as? Rectable & Colorful else { return }
+            
+            let slide = findSlide(with: rect.id.toInt)
+            let (red, green, blue) = rect.color.toDoubleRgb()
+            slide?.changeColor(red: red, green: green, blue: blue)
+        })
     }
     
     private func findSubview(tag: Int?) -> UIView? {
