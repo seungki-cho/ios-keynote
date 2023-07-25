@@ -13,17 +13,7 @@ class SlideManager: SlideManagerProtocol {
     
     //MARK: - Property
     private var slides: [Rectable] = []
-    private var currentSlideIndex = 0
-    private var selectedRect: Rectable? {
-        willSet {
-            selectedRectDidChanged?(newValue)
-        }
-    }
     var count: Int { slides.count }
-    
-    //MARK: - Output
-    var selectedRectDidChanged: ((Rectable?) -> ())?
-    var changed: ((Rectable?) -> ())?
     
     //MARK: - Lifecycle
     init(rectFactory: RectFactoryProtocol) {
@@ -40,19 +30,13 @@ class SlideManager: SlideManagerProtocol {
         return newRect
     }
     
-        selectedRect?.alpha = alpha
-        changed?(selectedRect)
     func changeAlpha(to alpha: Int) {
     }
     
-        guard let rect = selectedRect as? Rect else { return }
     func changeColor(to color: SKColor) {
         rect.color = color
-        changed?(rect)
     }
     
-        let currentSlide = slides[currentSlideIndex]
-        selectedRect = currentSlide.contains(point: point, where: center) ? currentSlide : nil
     func tapped(at point: SKPoint, center: SKPoint) {
     }
 }

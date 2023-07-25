@@ -15,7 +15,4 @@ protocol SlideManagerProtocol {
     
     var count: Int { get }
     subscript(i: Int) -> Rectable? { get }
-    
-    var selectedRectDidChanged: ((Rectable?) -> ())? { get set }
-    var changed: ((Rectable?) -> ())? { get set }
 }
