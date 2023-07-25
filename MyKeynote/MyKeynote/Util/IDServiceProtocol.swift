@@ -8,5 +8,5 @@
 import Foundation
 
 protocol IDServiceProtocol {
-    func makeNewID() -> String
+    func makeNewID() -> SKID
 }

@@ -14,12 +14,12 @@ class IDService: IDServiceProtocol {
     
     private init() {}
         
-    func makeNewID() -> String {
+    func makeNewID() -> SKID {
         let randomPool = "abcdefghijklmnopqrstuvwxyz0123456789".map{ String($0) }
         let randomArary = (0..<3).map { _ in (0..<3).map{ _ in randomPool[Int.random(in: 0..<randomPool.count)] }.joined() }
         let id = randomArary.joined(separator: "-")
-        IDs.insert(IDs.contains(id) ? makeNewID() : id)
-        return id
+        IDs.insert(IDs.contains(id) ? makeNewID().id : id)
+        return SKID(id: id)
     }
     
     static func toInt(_ id: String?) -> Int? {

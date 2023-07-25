@@ -8,7 +8,7 @@
 import Foundation
 
 class Rect: Rectable, Colorful {
-    let id: String
+    let id: SKID
     var point: SKPoint
     var height: Int
     var aspectRatio: Double { 4.0 / 3.0 }
@@ -17,7 +17,7 @@ class Rect: Rectable, Colorful {
     
     var description: String { "(\(id)), Height:\(height), \(color.description), Alpha:\(String(format: "%2d", alpha))" }
     
-    required init(id: String, point: SKPoint, height: Int, alpha: Int, color: SKColor?, photo: Data? = nil) {
+    required init(id: SKID, point: SKPoint, height: Int, alpha: Int, color: SKColor?, photo: Data? = nil) {
         self.id = id
         self.point = point
         self.height = height

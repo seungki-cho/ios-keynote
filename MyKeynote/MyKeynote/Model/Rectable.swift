@@ -8,12 +8,12 @@
 import Foundation
 
 protocol Rectable: CustomStringConvertible {
-    var id: String { get }
+    var id: SKID { get }
     var height: Int { get set }
     var aspectRatio: Double { get }
     var alpha: Int { get set }
     
-    init(id: String, point: SKPoint, height: Int, alpha: Int, color: SKColor?, photo: Data?)
+    init(id: SKID, point: SKPoint, height: Int, alpha: Int, color: SKColor?, photo: Data?)
 }
 
 extension Rectable {
