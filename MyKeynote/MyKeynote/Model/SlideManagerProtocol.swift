@@ -9,9 +9,9 @@ import Foundation
 
 protocol SlideManagerProtocol {
     mutating func makeRect<T: Rectable>(by type: T.Type, photo: Data?) -> T
-    mutating func changeAlpha(to alpha: Int)
-    mutating func changeColor(to color: SKColor)
-    mutating func tapped(at point: SKPoint, center: SKPoint)
+    func changeAlpha(to alpha: Int)
+    func changeColor(to color: SKColor)
+    func tapped(at point: SKPoint, center: SKPoint)
     
     var count: Int { get }
     subscript(i: Int) -> Rectable? { get }
