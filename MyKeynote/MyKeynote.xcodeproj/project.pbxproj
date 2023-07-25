@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76101C1F2A6FE65E006E5BAF /* SlideCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76101C1E2A6FE65E006E5BAF /* SlideCell.swift */; };
 		7651B5FF2A6BDF250098B75D /* SlideManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CA02A66B4A2006B8B6B /* SlideManager.swift */; };
 		7651B6002A6BDF250098B75D /* SKPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CB22A6967DE006B8B6B /* SKPoint.swift */; };
 		7651B6012A6BDF250098B75D /* RectFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36375972A652B7A00AE6121 /* RectFactory.swift */; };
@@ -71,6 +72,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		76101C1E2A6FE65E006E5BAF /* SlideCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideCell.swift; sourceTree = "<group>"; };
 		7651B60B2A6BED750098B75D /* MockRectFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRectFactory.swift; sourceTree = "<group>"; };
 		7651B60E2A6E3DAF0098B75D /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		7651B6102A6E6C680098B75D /* SKID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKID.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				76781CA82A66CAAA006B8B6B /* ColorControlView.swift */,
 				76781CAA2A6764C8006B8B6B /* AlphaControlView.swift */,
 				7651B60E2A6E3DAF0098B75D /* CanvasView.swift */,
+				76101C1E2A6FE65E006E5BAF /* SlideCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				7651B6112A6E6C680098B75D /* SKID.swift in Sources */,
 				76781CA32A66B50A006B8B6B /* RectFactoryProtocol.swift in Sources */,
 				C363759C2A6538DA00AE6121 /* IDService.swift in Sources */,
+				76101C1F2A6FE65E006E5BAF /* SlideCell.swift in Sources */,
 				76781CAB2A6764C8006B8B6B /* AlphaControlView.swift in Sources */,
 				76781CB52A697BBE006B8B6B /* Rect.swift in Sources */,
 				76781CA12A66B4A2006B8B6B /* SlideManager.swift in Sources */,
