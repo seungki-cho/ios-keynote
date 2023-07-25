@@ -11,11 +11,11 @@ protocol CanvasViewDelegate: AnyObject {
     func canvasTapped(at point: CGPoint)
 }
 
-class CanvasView: UIView {
+class CanvasView: UIView { 
     // MARK: - UI properties
+    private var slide: UIView!
     
     // MARK: - Properties
-    var slides: [String: UIView] = [:]
     weak var delegate: CanvasViewDelegate?
     
     // MARK: - Lifecycles
@@ -31,25 +31,35 @@ class CanvasView: UIView {
         backgroundColor = .white
     }
     // MARK: - Helpers
-    func configureEvent() {
+    private func configureEvent() {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(canvasTapped(sender:)))
         addGestureRecognizer(tapGestureRecognizer)
     }
     
-    @objc func canvasTapped(sender: UITapGestureRecognizer) {
+    @objc private func canvasTapped(sender: UITapGestureRecognizer) {
         delegate?.canvasTapped(at: sender.location(in: self))
     }
     
     func makeRectable(_ rectable: Rectable, color: UIColor? = nil) {
         let (width, height) = (rectable.getWidth(), Double(rectable.height))
-        let newView = UIView(frame: CGRect(x: bounds.midX - width / 2,
-                                           y: bounds.midY - height / 2,
-                                           width: width,
-                                           height: height))
-        newView.backgroundColor = color
-        slides[rectable.id] = newView
-        subviews.forEach { $0.isHidden = true }
-        newView.isSelected = true
-        addSubview(newView)
+        slide = UIView(frame: CGRect(x: bounds.midX - width / 2,
+                                     y: bounds.midY - height / 2,
+                                     width: width,
+                                     height: height))
+        slide.backgroundColor = color
+        tag = rectable.id.toInt
+        addSubview(slide)
+    }
+    
+    func changeSelection(to isSelected: Bool) {
+        slide.isSelected = isSelected
+    }
+    
+    func changeColor(red: CGFloat, green: CGFloat, blue: CGFloat) {
+        slide.changeBackgroundColor(red: red, green: green, blue: blue)
+    }
+    
+    func changeAlpha(to alpha: CGFloat) {
+        slide.changeBackgroundAlpha(to: alpha)
     }
 }
