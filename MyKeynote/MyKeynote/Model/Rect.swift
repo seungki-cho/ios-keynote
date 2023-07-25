@@ -13,6 +13,7 @@ class Rect: Rectable, Colorful {
     var height: Int
     var aspectRatio: Double { 4.0 / 3.0 }
     var color: SKColor
+    var isSelected: Bool
     @OneToTen var alpha: Int
     
     var description: String { "(\(id)), Height:\(height), \(color.description), Alpha:\(String(format: "%2d", alpha))" }
@@ -23,5 +24,6 @@ class Rect: Rectable, Colorful {
         self.height = height
         self.alpha = alpha
         self.color = color ?? SKColor.randomOne()
+        isSelected = false
     }
 }

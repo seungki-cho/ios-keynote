@@ -12,6 +12,7 @@ protocol Rectable: CustomStringConvertible {
     var height: Int { get set }
     var aspectRatio: Double { get }
     var alpha: Int { get set }
+    var isSelected: Bool { get set }
     
     init(id: SKID, point: SKPoint, height: Int, alpha: Int, color: SKColor?, photo: Data?)
 }
