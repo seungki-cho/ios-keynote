@@ -51,6 +51,14 @@ class KeyNoteViewController: UIViewController {
         super.viewSafeAreaInsetsDidChange()
         configureFrame()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let square = slideManager.makeRect(by: Square.self, photo: nil)
+        canvasView.makeRectable(square, color: UIColor(skColor: square.color, skAlpha: square.alpha))
+
+    }
+    
     //MARK: - Helper
     private func configureFrame() {
         let safeRect = view.safeAreaLayoutGuide.layoutFrame
