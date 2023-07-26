@@ -30,12 +30,12 @@
 - [x] 투명도, 배경색 입출력 흐름 구현 - 20분 - (7/20 11:07)
 
 ### 7/20 목
-- [ ] 옵저버 패턴 공부 및 정리 - 30분
-- [ ] M - VC 간의 관계를 Notification Center로 변경 - 30분
-- [ ] TableViewDataSource 공부및 정리 - 30분
-- [ ] 🖌️ Custom TableViewCell - 30분 
-- [ ] 🖌️ TableView UI - 30분
-- [ ] TableView Delegate - 1시간 
+- [x] 옵저버 패턴 공부 및 정리 - 30분
+- [x] M - VC 간의 관계를 Notification Center로 변경 - 30분 (7/25 17:24)
+- [x] TableViewDataSource 공부및 정리 - 30분
+- [x] 🖌️ Custom TableViewCell - 30분 
+- [x] 🖌️ TableView UI - 30분
+- [x] TableView Delegate - 1시간 (7/26 20:30)
 
 ### 7/20 금
 - [ ] 리팩토링과 밀렸다면 과제 - 2시간
@@ -55,4 +55,20 @@
 ![](https://i.ibb.co/5nGwDJK/Simulator-Screen-Recording-i-Pad-Pro-11-inch-4th-generation-2023-07-24-at-10-20-31.gif)
 - 선택 후 배경색, 투명도 조절 가능
 - 빈 영역 터치 시 선택 해제
+</details>
+
+<details> 
+<summary>W4</summary>
+
+(7/25 17:25)
+![](https://i.ibb.co/5nGwDJK/Simulator-Screen-Recording-i-Pad-Pro-11-inch-4th-generation-2023-07-24-at-10-20-31.gif)
+- 기존과 같지만 옵저버로 변경 . . .
+----
+(7/26 20:30)
+![](https://i.ibb.co/5kcy60S/Simulator-Screen-Recording-i-Pad-Pro-11-inch-4th-generation-2023-07-26-at-20-55-22.gif)
+
+- 테이블뷰
+- UITableViewDelegate 이용, 선택과 해제 가능
+- Input흐름과 Output흐름 분리
+
 </details>
