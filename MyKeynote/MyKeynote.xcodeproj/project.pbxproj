@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		76101C1F2A6FE65E006E5BAF /* SlideCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76101C1E2A6FE65E006E5BAF /* SlideCell.swift */; };
+		76101C212A6FEC6F006E5BAF /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76101C202A6FEC6F006E5BAF /* UIImage+.swift */; };
 		7651B5FF2A6BDF250098B75D /* SlideManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CA02A66B4A2006B8B6B /* SlideManager.swift */; };
 		7651B6002A6BDF250098B75D /* SKPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CB22A6967DE006B8B6B /* SKPoint.swift */; };
 		7651B6012A6BDF250098B75D /* RectFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36375972A652B7A00AE6121 /* RectFactory.swift */; };
@@ -73,6 +74,7 @@
 
 /* Begin PBXFileReference section */
 		76101C1E2A6FE65E006E5BAF /* SlideCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideCell.swift; sourceTree = "<group>"; };
+		76101C202A6FEC6F006E5BAF /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		7651B60B2A6BED750098B75D /* MockRectFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRectFactory.swift; sourceTree = "<group>"; };
 		7651B60E2A6E3DAF0098B75D /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		7651B6102A6E6C680098B75D /* SKID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKID.swift; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 				76781CB82A69940B006B8B6B /* UIColor+.swift */,
 				76781CBA2A6997B4006B8B6B /* UIView+.swift */,
 				7651B6122A6E71750098B75D /* NotificationName.swift */,
+				76101C202A6FEC6F006E5BAF /* UIImage+.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				76101C1F2A6FE65E006E5BAF /* SlideCell.swift in Sources */,
 				76781CAB2A6764C8006B8B6B /* AlphaControlView.swift in Sources */,
 				76781CB52A697BBE006B8B6B /* Rect.swift in Sources */,
+				76101C212A6FEC6F006E5BAF /* UIImage+.swift in Sources */,
 				76781CA12A66B4A2006B8B6B /* SlideManager.swift in Sources */,
 				76781CA72A66C8B5006B8B6B /* ControlStackView.swift in Sources */,
 				C36375A02A65805900AE6121 /* Logger+.swift in Sources */,
