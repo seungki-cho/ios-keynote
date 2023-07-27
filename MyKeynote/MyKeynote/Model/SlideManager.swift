@@ -9,11 +9,18 @@ import Foundation
 
 class SlideManager: SlideManagerProtocol {
     enum Notifications {
-        static let selectedRectChanged = Notification.Name("selectedRectChanged")
+        static let selectedSlideChanged = Notification.Name("selectedSlideChanged")
         static let rectColorChanged = Notification.Name("rectColorChanged")
         static let slideAlphaChanged = Notification.Name("slideAlphaChanged")
         static let squareMade = Notification.Name("squareMade")
         static let tableIndexChanged = Notification.Name("tableIndexChanged")
+    }
+    enum UserInfoKeys {
+        static let slide = "slide"
+        static let rect = "rect"
+        static let selectedSlide = "selectedSlide"
+        static let id = "id"
+        static let index = "index"
     }
     //MARK: - Dependency
     private let rectFactory: RectFactoryProtocol
@@ -38,34 +45,34 @@ class SlideManager: SlideManagerProtocol {
         slides.append(newRect)
         
         currentTableIndex = count - 1
-        NotificationCenter.default.post(name: SlideManager.Notifications.squareMade, object: self, userInfo: ["slide": newRect, "index": currentTableIndex])
+        NotificationCenter.default.post(name: SlideManager.Notifications.squareMade, object: self, userInfo: [UserInfoKeys.slide: newRect, UserInfoKeys.index: currentTableIndex])
     }
     
     func changeAlpha(to alpha: Int) {
         guard let index = currentTableIndex else { return }
         slides[index].alpha = alpha
-        NotificationCenter.default.post(name: SlideManager.Notifications.slideAlphaChanged, object: self, userInfo: ["slide": slides[index]])
+        NotificationCenter.default.post(name: SlideManager.Notifications.slideAlphaChanged, object: self, userInfo: [UserInfoKeys.slide: slides[index]])
     }
     
     func changeColor(to color: SKColor) {
         guard let index = currentTableIndex,
               var rect = slides[index] as? Colorful else { return }
         rect.color = color
-        NotificationCenter.default.post(name: SlideManager.Notifications.rectColorChanged, object: self, userInfo: ["rect": rect])
+        NotificationCenter.default.post(name: SlideManager.Notifications.rectColorChanged, object: self, userInfo: [UserInfoKeys.rect: rect])
     }
     
     func tapped(at point: SKPoint, center: SKPoint) {
         guard let index = currentTableIndex else { return }
         let slide = slides[index]
-        let selectedRect = slide.contains(point: point, where: center) ? slide : nil
-        NotificationCenter.default.post(name: SlideManager.Notifications.selectedRectChanged, object: self, userInfo: ["selectedRect": selectedRect])
+        let selectedSlide = slide.contains(point: point, where: center) ? slide : nil
+        NotificationCenter.default.post(name: SlideManager.Notifications.selectedSlideChanged, object: self, userInfo: [UserInfoKeys.selectedSlide: selectedSlide])
     }
     
     func changeTableIndex(to index: Int?) {
         currentTableIndex = index
         
         let slide = index != nil ? self[index!] : nil
-        NotificationCenter.default.post(name: SlideManager.Notifications.tableIndexChanged, object: self, userInfo: ["id": slide?.id])
-        NotificationCenter.default.post(name: SlideManager.Notifications.selectedRectChanged, object: self, userInfo: ["selectedRect": slide])
+        NotificationCenter.default.post(name: SlideManager.Notifications.tableIndexChanged, object: self, userInfo: [UserInfoKeys.id: slide?.id])
+        NotificationCenter.default.post(name: SlideManager.Notifications.selectedSlideChanged, object: self, userInfo: [UserInfoKeys.slide: slide])
     }
 }
