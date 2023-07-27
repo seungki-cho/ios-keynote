@@ -10,7 +10,9 @@ import os
 
 class KeyNoteViewController: UIViewController {
     enum Constant {
-        static let sideWidth = 200.0
+        static let sideWidth = 175.0
+        static let cellHeight = 95.0
+        static let makeRectButtonHeight = 50.0
     }
     //MARK: - UI Property
     private let tableView = UITableView()
