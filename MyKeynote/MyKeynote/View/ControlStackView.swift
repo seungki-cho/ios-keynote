@@ -63,6 +63,11 @@ class ControlStackView: UIView {
     func bind(color: SKColor? = nil) {
         colorControlView.bind(color)
     }
+    
+    func deselect() {
+        alphaControlView.bind(skAlpha: nil)
+        colorControlView.bind(nil)
+    }
 }
 
 extension ControlStackView: ColorControlViewDelegate {
