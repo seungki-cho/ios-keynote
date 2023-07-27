@@ -51,10 +51,15 @@ class CanvasView: UIView {
         tag = rectable.id.toInt
         addSubview(slide)
         selectSlide(by: rectable.id)
+        select(by: rectable.id, to: true)
     }
     
-    func changeSelection(to isSelected: Bool) {
-        slide.isSelected = isSelected
+    func select(by id: SKID, to isSelected: Bool) {
+        slides[id]?.isSelected = isSelected
+    }
+    
+    func deselect() {
+        slides.values.forEach { $0.isSelected = false }
     }
     
     func changeColor(red: CGFloat, green: CGFloat, blue: CGFloat) {
