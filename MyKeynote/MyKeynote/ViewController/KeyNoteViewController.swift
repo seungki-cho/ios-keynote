@@ -18,6 +18,16 @@ class KeyNoteViewController: UIViewController {
     private let tableView = UITableView()
     private let canvasView = CanvasView()
     private let controlStackView = ControlStackView()
+    private let makeSlideButton = {
+        let button = UIButton()
+        button.setTitle("( + )", for: .normal)
+        button.setTitleColor(UIColor.blue, for: .normal)
+        button.backgroundColor = .cyan
+        button.tintColor = .blue
+        button.layer.cornerRadius = 10
+        button.addTarget(self, action: #selector(makeSlideButtonTapped(sender:)), for: .touchUpInside)
+        return button
+    }()
     private let backgroundView = {
         let view = UIView()
         view.backgroundColor = .systemGray2
@@ -25,7 +35,6 @@ class KeyNoteViewController: UIViewController {
     }()
     //MARK: - Property
     var slideManager: SlideManagerProtocol
-    private var selectedRectTag: Int?
     
     //MARK: - LifeCycle
     init(slideManager: SlideManagerProtocol) {
@@ -42,11 +51,10 @@ class KeyNoteViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
-        [backgroundView, canvasView, controlStackView, tableView].forEach {
+        [backgroundView, controlStackView, canvasView, tableView, makeSlideButton].forEach {
             view.addSubview($0)
         }
         view.backgroundColor = .darkGray
-        configureEvent()
     }
     
     override func viewSafeAreaInsetsDidChange() {
@@ -78,7 +86,7 @@ class KeyNoteViewController: UIViewController {
                                       width: safeRect.width,
                                       height: safeRect.minY + safeRect.height)
         
-        controlStackView.frame = CGRect(x: canvasView.frame.maxX,
+        controlStackView.frame = CGRect(x: safeRect.maxX - Constant.sideWidth,
                                         y: safeRect.minY,
                                         width: Constant.sideWidth,
                                         height: view.frame.height - safeRect.minY)
@@ -86,13 +94,19 @@ class KeyNoteViewController: UIViewController {
         tableView.frame = CGRect(x: 0,
                                  y: safeRect.minY,
                                  width: Constant.sideWidth,
-                                 height: view.frame.height - safeRect.minY)
+                                 height: view.frame.height - safeRect.minY - Constant.makeRectButtonHeight)
+        
+        makeSlideButton.frame = CGRect(x: 0,
+                                       y: tableView.frame.maxY,
+                                       width: Constant.sideWidth,
+                                       height: Constant.makeRectButtonHeight)
     }
     
     private func configureEvent() {
         canvasView.delegate = self
         controlStackView.delegate = self
         tableView.delegate = self
+        tableView.register(SlideCell.self, forCellReuseIdentifier: SlideCell.identifier)
         bind()
     }
     
@@ -131,9 +145,8 @@ class KeyNoteViewController: UIViewController {
         })
     }
     
-    private func findSlide(with tag: Int?) -> CanvasView? {
-        guard let tag else { return nil }
-        return view.subviews.first { $0.tag == tag } as? CanvasView
+    @objc func makeSlideButtonTapped(sender: UIButton!) {
+        slideManager.makeRect(by: Square.self, photo: nil)
     }
 }
 
