@@ -22,7 +22,6 @@ extension UIView {
         var (red, green, blue): (CGFloat, CGFloat, CGFloat) = (0.0, 0.0, 0.0)
         backgroundColor?.getRed(&red, green: &green, blue: &blue, alpha: nil)
         backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: alpha)
-        print(alpha)
     }
     
     func changeBackgroundColor(red: CGFloat, green: CGFloat, blue: CGFloat) {
