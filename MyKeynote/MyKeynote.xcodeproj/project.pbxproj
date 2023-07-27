@@ -25,7 +25,7 @@
 		7651B60D2A6D131B0098B75D /* OneToTen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36375952A6526EA00AE6121 /* OneToTen.swift */; };
 		7651B60F2A6E3DAF0098B75D /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651B60E2A6E3DAF0098B75D /* CanvasView.swift */; };
 		7651B6112A6E6C680098B75D /* SKID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651B6102A6E6C680098B75D /* SKID.swift */; };
-		7651B6132A6E71750098B75D /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651B6122A6E71750098B75D /* NotificationName.swift */; };
+		76741EE42A7221DF00F99D55 /* SKID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651B6102A6E6C680098B75D /* SKID.swift */; };
 		76781CA12A66B4A2006B8B6B /* SlideManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CA02A66B4A2006B8B6B /* SlideManager.swift */; };
 		76781CA32A66B50A006B8B6B /* RectFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CA22A66B50A006B8B6B /* RectFactoryProtocol.swift */; };
 		76781CA52A66C451006B8B6B /* SlideManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76781CA42A66C451006B8B6B /* SlideManagerProtocol.swift */; };
@@ -78,7 +78,6 @@
 		7651B60B2A6BED750098B75D /* MockRectFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRectFactory.swift; sourceTree = "<group>"; };
 		7651B60E2A6E3DAF0098B75D /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		7651B6102A6E6C680098B75D /* SKID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKID.swift; sourceTree = "<group>"; };
-		7651B6122A6E71750098B75D /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
 		76781CA02A66B4A2006B8B6B /* SlideManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideManager.swift; sourceTree = "<group>"; };
 		76781CA22A66B50A006B8B6B /* RectFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectFactoryProtocol.swift; sourceTree = "<group>"; };
 		76781CA42A66C451006B8B6B /* SlideManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideManagerProtocol.swift; sourceTree = "<group>"; };
@@ -246,7 +245,6 @@
 				C363759F2A65805900AE6121 /* Logger+.swift */,
 				76781CB82A69940B006B8B6B /* UIColor+.swift */,
 				76781CBA2A6997B4006B8B6B /* UIView+.swift */,
-				7651B6122A6E71750098B75D /* NotificationName.swift */,
 				76101C202A6FEC6F006E5BAF /* UIImage+.swift */,
 			);
 			path = Util;
@@ -407,7 +405,6 @@
 				76781CA52A66C451006B8B6B /* SlideManagerProtocol.swift in Sources */,
 				C363755B2A64DF8500AE6121 /* SceneDelegate.swift in Sources */,
 				C36375962A6526EA00AE6121 /* OneToTen.swift in Sources */,
-				7651B6132A6E71750098B75D /* NotificationName.swift in Sources */,
 				76781CB92A69940B006B8B6B /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +413,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76741EE42A7221DF00F99D55 /* SKID.swift in Sources */,
 				7651B60A2A6BDF340098B75D /* IDServiceProtocol.swift in Sources */,
 				7651B6092A6BDF340098B75D /* IDService.swift in Sources */,
 				7651B6042A6BDF250098B75D /* Rect.swift in Sources */,
