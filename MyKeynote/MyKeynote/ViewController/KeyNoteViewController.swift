@@ -106,6 +106,7 @@ class KeyNoteViewController: UIViewController {
         canvasView.delegate = self
         controlStackView.delegate = self
         tableView.delegate = self
+        tableView.dataSource = self
         tableView.register(SlideCell.self, forCellReuseIdentifier: SlideCell.identifier)
         bind()
     }
@@ -142,6 +143,28 @@ class KeyNoteViewController: UIViewController {
             let slide = findSlide(with: rect.id.toInt)
             let (red, green, blue) = rect.color.toDoubleRgb()
             slide?.changeColor(red: red, green: green, blue: blue)
+        NotificationCenter.default.addObserver(forName: .squareMade, object: nil, queue: nil, using: { [weak self] notification in
+            guard let self,
+                  let userInfo = notification.userInfo,
+                  let rect = userInfo["slide"] as? Square,
+                  let index = userInfo["index"] as? Int else { return }
+            
+            self.canvasView.makeRectable(rect, color: rect.color)
+            self.controlStackView.bind(alpha: rect.alpha)
+            self.controlStackView.bind(color: rect.color)
+            DispatchQueue.main.async {
+                self.tableView.insertRows(at: [IndexPath(row: self.slideManager.count-1, section: 0)], with: .automatic)
+                self.tableView.selectRow(at: IndexPath(row: index, section: 0), animated: true, scrollPosition: .middle)
+            }
+        })
+        
+        NotificationCenter.default.addObserver(forName: .tableIndexChanged, object: nil, queue: nil, using: { [weak self] notification in
+            guard let self, let userInfo = notification.userInfo else { return }
+            guard let displayId = userInfo["id"] as? SKID else {
+                self.canvasView.deselectSlide()
+                return
+            }
+            canvasView.selectSlide(by: displayId)
         })
     }
     
@@ -151,7 +174,32 @@ class KeyNoteViewController: UIViewController {
 }
 
 extension KeyNoteViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        if let selectedIndexPath = tableView.indexPathForSelectedRow, selectedIndexPath == indexPath {
+            slideManager.changeTableIndex(to: nil)
+            tableView.deselectRow(at: selectedIndexPath, animated: true)
+            return nil
+        }
+        slideManager.changeTableIndex(to: indexPath.row)
+        return indexPath
+    }
+}
+
+extension KeyNoteViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        slideManager.count
+    }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: SlideCell.identifier,
+                                                       for: indexPath) as? SlideCell else { return UITableViewCell() }
+        cell.bind(index: indexPath.row)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        Constant.cellHeight
+    }
 }
 
 extension KeyNoteViewController: CanvasViewDelegate {
