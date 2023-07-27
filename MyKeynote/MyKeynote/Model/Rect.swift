@@ -9,21 +9,18 @@ import Foundation
 
 class Rect: Rectable, Colorful {
     let id: SKID
-    var point: SKPoint
     var height: Int
     var aspectRatio: Double { 4.0 / 3.0 }
     var color: SKColor
-    var isSelected: Bool
+    var isSelected: Bool = false
     @OneToTen var alpha: Int
     
     var description: String { "(\(id)), Height:\(height), \(color.description), Alpha:\(String(format: "%2d", alpha))" }
     
-    required init(id: SKID, point: SKPoint, height: Int, alpha: Int, color: SKColor?, photo: Data? = nil) {
+    required init(id: SKID, height: Int, alpha: Int, color: SKColor) {
         self.id = id
-        self.point = point
         self.height = height
         self.alpha = alpha
-        self.color = color ?? SKColor.randomOne()
-        isSelected = false
+        self.color = color
     }
 }

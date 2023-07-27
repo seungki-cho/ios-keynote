@@ -166,7 +166,7 @@ class KeyNoteViewController: UIViewController {
     }
     
     @objc func makeSlideButtonTapped(sender: UIButton!) {
-        slideManager.makeRect(by: Square.self, photo: nil)
+        slideManager.makeSquare()
     }
 }
 

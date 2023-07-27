@@ -8,6 +8,5 @@
 import Foundation
 
 protocol RectFactoryProtocol {
-    func changeMaxPoint(_ point: SKPoint)
-    func make<T: Rectable>(by type: T.Type, photo: Data?) -> T
+    func makeSquare() -> Square 
 }

@@ -41,18 +41,17 @@ class CanvasView: UIView {
         delegate?.canvasTapped(at: sender.location(in: self))
     }
     
-    func makeRectable(_ rectable: Rectable, color: SKColor? = nil) {
-        let (width, height) = (rectable.getWidth(), Double(rectable.height))
+    func makeSlide(_ rect: Rectable & Colorful) {
+        let (width, height) = (rect.getWidth(), Double(rect.height))
         let slide = UIView(frame: CGRect(x: bounds.midX - width / 2,
                                      y: bounds.midY - height / 2,
                                      width: width,
                                      height: height))
-        slides[rectable.id] = slide
+        slides[rect.id] = slide
         addSubview(slide)
-        selectSlide(by: rectable.id)
-        select(by: rectable.id, to: true)
-        guard let (r, g, b) = color?.toDoubleRgb() else { return }
-        slide.backgroundColor = UIColor(red: r, green: g, blue: b, alpha: CGFloat(rectable.alpha) / 10.0)
+        selectSlide(by: rect.id)
+        select(by: rect.id, to: true)
+        slide.backgroundColor = UIColor(skColor: rect.color, skAlpha: rect.alpha)
     }
     
     func select(by id: SKID, to isSelected: Bool) {

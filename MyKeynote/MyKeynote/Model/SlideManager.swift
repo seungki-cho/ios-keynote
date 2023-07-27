@@ -33,8 +33,8 @@ class SlideManager: SlideManagerProtocol {
         (0..<slides.count) ~= i ? slides[i] : nil
     }
     
-    func makeRect<T: Rectable>(by type: T.Type, photo: Data? = nil) {
-        let newRect = rectFactory.make(by: type, photo: photo)
+    func makeSquare() {
+        let newRect = rectFactory.makeSquare()
         slides.append(newRect)
         
         currentTableIndex = count - 1
