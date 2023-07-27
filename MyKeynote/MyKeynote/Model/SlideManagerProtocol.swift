@@ -12,6 +12,7 @@ protocol SlideManagerProtocol: SlideColorful {
     func changeAlpha(to alpha: Int)
 
     func tapped(at point: SKPoint, center: SKPoint)
+    func changeTableIndex(to index: Int?)
     
     var count: Int { get }
     subscript(i: Int) -> Rectable? { get }
