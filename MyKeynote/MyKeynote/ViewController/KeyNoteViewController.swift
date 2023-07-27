@@ -62,11 +62,9 @@ class KeyNoteViewController: UIViewController {
         configureFrame()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        let square = slideManager.makeRect(by: Square.self, photo: nil)
-        canvasView.makeRectable(square, color: UIColor(skColor: square.color, skAlpha: square.alpha))
-
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configureEvent()
     }
     
     //MARK: - Helper
@@ -113,15 +111,14 @@ class KeyNoteViewController: UIViewController {
     
     private func bind() {
         NotificationCenter.default.addObserver(forName: .selectedRectChanged, object: nil, queue: nil, using: { [weak self] notification in
-            guard let self,
-                  let userInfo = notification.userInfo,
-                  let selectedRect = userInfo["selectedRect"] as? Rectable else {
-                self?.canvasView.changeSelection(to: false)
-                self?.controlStackView.bind(alpha: nil)
-                self?.controlStackView.bind(color: nil)
+            guard let self, let userInfo = notification.userInfo else { return }
+            guard let selectedRect = userInfo["selectedRect"] as? Rectable else {
+                self.canvasView.deselect()
+                self.controlStackView.deselect()
                 return
             }
-            canvasView.changeSelection(to: true)
+        
+            canvasView.select(by: selectedRect.id, to: true)
             controlStackView.bind(alpha: selectedRect.alpha)
             controlStackView.bind(color: (selectedRect as? Colorful)?.color)
         })
@@ -131,8 +128,7 @@ class KeyNoteViewController: UIViewController {
                   let userInfo = notification.userInfo,
                   let rect = userInfo["slide"] as? Rectable else { return }
             
-            let slide = findSlide(with: rect.id.toInt)
-            slide?.changeAlpha(to: CGFloat(Double(rect.alpha) / 10))
+            canvasView.changeAlpha(id: rect.id, to: CGFloat(Double(rect.alpha) / 10))
         })
         
         NotificationCenter.default.addObserver(forName: .rectColorChanged, object: nil, queue: nil, using: { [weak self] notification in
@@ -140,9 +136,10 @@ class KeyNoteViewController: UIViewController {
                   let userInfo = notification.userInfo,
                   let rect = userInfo["rect"] as? Rectable & Colorful else { return }
             
-            let slide = findSlide(with: rect.id.toInt)
             let (red, green, blue) = rect.color.toDoubleRgb()
-            slide?.changeColor(red: red, green: green, blue: blue)
+            canvasView.changeColor(id: rect.id, red: red, green: green, blue: blue)
+        })
+        
         NotificationCenter.default.addObserver(forName: .squareMade, object: nil, queue: nil, using: { [weak self] notification in
             guard let self,
                   let userInfo = notification.userInfo,
