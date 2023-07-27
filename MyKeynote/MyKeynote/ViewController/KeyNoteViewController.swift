@@ -119,8 +119,8 @@ class KeyNoteViewController: UIViewController {
             }
         
             canvasView.select(by: selectedRect.id, to: true)
-            controlStackView.bind(alpha: selectedRect.alpha)
-            controlStackView.bind(color: (selectedRect as? Colorful)?.color)
+            controlStackView.changeAlpha(to: selectedRect.alpha)
+            controlStackView.changeColor(to: (selectedRect as? Colorful)?.color)
         })
         
         NotificationCenter.default.addObserver(forName: SlideManager.Notifications.slideAlphaChanged, object: nil, queue: nil, using: { [weak self] notification in
@@ -146,9 +146,9 @@ class KeyNoteViewController: UIViewController {
                   let rect = userInfo["slide"] as? Square,
                   let index = userInfo["index"] as? Int else { return }
             
-            self.canvasView.makeRectable(rect, color: rect.color)
-            self.controlStackView.bind(alpha: rect.alpha)
-            self.controlStackView.bind(color: rect.color)
+            self.canvasView.makeSlide(rect)
+            self.controlStackView.changeAlpha(to: rect.alpha)
+            self.controlStackView.changeColor(to: rect.color)
             DispatchQueue.main.async {
                 self.tableView.insertRows(at: [IndexPath(row: self.slideManager.count-1, section: 0)], with: .automatic)
                 self.tableView.selectRow(at: IndexPath(row: index, section: 0), animated: true, scrollPosition: .middle)
@@ -190,7 +190,7 @@ extension KeyNoteViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: SlideCell.identifier,
                                                        for: indexPath) as? SlideCell else { return UITableViewCell() }
-        cell.bind(index: indexPath.row)
+        cell.changeIndex(to: "\(indexPath.row+1)")
         return cell
     }
     
@@ -230,6 +230,6 @@ extension KeyNoteViewController: UIColorPickerViewControllerDelegate {
                               green: UInt8(green * 255),
                               blue: UInt8(blue * 255))
         slideManager.changeColor(to: skColor)
-        controlStackView.bind(color: skColor)
+        controlStackView.changeColor(to: skColor)
     }
 }

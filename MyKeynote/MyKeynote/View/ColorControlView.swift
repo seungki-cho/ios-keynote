@@ -78,7 +78,7 @@ class ColorControlView: UIView {
         delegate?.colorButtonTapped()
     }
     
-    func bind(_ color: SKColor?) {
+    func changeColor(to color: SKColor?) {
         guard let color else {
             colorButton.isEnabled = false
             colorButton.backgroundColor = UIColor.white

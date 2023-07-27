@@ -57,7 +57,7 @@ class SlideCell: UITableViewCell {
         ])
     }
     
-    func bind(index: Int) {
-        indexLabel.text = "\(index+1)"
+    func changeIndex(to index: String) {
+        indexLabel.text = index
     }
 }

@@ -56,17 +56,17 @@ class ControlStackView: UIView {
                                         height: frame.width * 9 / 16)
     }
     
-    func bind(alpha: Int? = nil) {
-        alphaControlView.bind(skAlpha: alpha)
+    func changeAlpha(to skAlpha: Int? = nil) {
+        alphaControlView.changeAlpha(to: skAlpha)
         
     }
-    func bind(color: SKColor? = nil) {
-        colorControlView.bind(color)
+    func changeColor(to skColor: SKColor? = nil) {
+        colorControlView.changeColor(to: skColor)
     }
     
     func deselect() {
-        alphaControlView.bind(skAlpha: nil)
-        colorControlView.bind(nil)
+        alphaControlView.changeAlpha(to: nil)
+        colorControlView.changeColor(to: nil)
     }
 }
 

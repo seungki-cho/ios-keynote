@@ -89,7 +89,7 @@ class AlphaControlView: UIView {
         alphaStepper.transform = CGAffineTransform(scaleX: 1.33, y: 1.36)
     }
     
-    func bind(skAlpha: Int?) {
+    func changeAlpha(to skAlpha: Int?) {
         guard let skAlpha else {
             alphaTextField.text = "0"
             alphaTextField.textColor = .gray
