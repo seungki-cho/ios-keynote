@@ -25,10 +25,13 @@ class SlideManager: SlideManagerProtocol {
     subscript(i: Int) -> Rectable? {
         (0..<slides.count) ~= i ? slides[i] : nil
     }
-    func makeRect<T: Rectable>(by type: T.Type, photo: Data? = nil) -> T {
+    
+    func makeRect<T: Rectable>(by type: T.Type, photo: Data? = nil) {
         let newRect = rectFactory.make(by: type, photo: photo)
         slides.append(newRect)
-        return newRect
+        
+        currentIndex = count - 1
+        NotificationCenter.default.post(name: .squareMade, object: self, userInfo: ["slide": newRect, "index": currentIndex])
     }
     
     func changeAlpha(to alpha: Int) {
