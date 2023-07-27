@@ -41,17 +41,18 @@ class CanvasView: UIView {
         delegate?.canvasTapped(at: sender.location(in: self))
     }
     
-    func makeRectable(_ rectable: Rectable, color: UIColor? = nil) {
+    func makeRectable(_ rectable: Rectable, color: SKColor? = nil) {
         let (width, height) = (rectable.getWidth(), Double(rectable.height))
-        slide = UIView(frame: CGRect(x: bounds.midX - width / 2,
+        let slide = UIView(frame: CGRect(x: bounds.midX - width / 2,
                                      y: bounds.midY - height / 2,
                                      width: width,
                                      height: height))
-        slide.backgroundColor = color
-        tag = rectable.id.toInt
+        slides[rectable.id] = slide
         addSubview(slide)
         selectSlide(by: rectable.id)
         select(by: rectable.id, to: true)
+        guard let (r, g, b) = color?.toDoubleRgb() else { return }
+        slide.backgroundColor = UIColor(red: r, green: g, blue: b, alpha: CGFloat(rectable.alpha) / 10.0)
     }
     
     func select(by id: SKID, to isSelected: Bool) {
@@ -62,16 +63,20 @@ class CanvasView: UIView {
         slides.values.forEach { $0.isSelected = false }
     }
     
-    func changeColor(red: CGFloat, green: CGFloat, blue: CGFloat) {
-        slide.changeBackgroundColor(red: red, green: green, blue: blue)
+    func changeColor(id: SKID, red: CGFloat, green: CGFloat, blue: CGFloat) {
+        slides[id]?.changeBackgroundColor(red: red, green: green, blue: blue)
+    }
+    
+    func changeAlpha(id: SKID, to alpha: CGFloat) {
+        slides[id]?.changeBackgroundAlpha(to: alpha)
+    }
+    
     func selectSlide(by id: SKID) {
         isHidden = false
         subviews.forEach { $0.isHidden = true }
         slides[id]?.isHidden = false
     }
     
-    func changeAlpha(to alpha: CGFloat) {
-        slide.changeBackgroundAlpha(to: alpha)
     func deselectSlide() {
         self.isHidden = true
         subviews.forEach { $0.isHidden = true }
