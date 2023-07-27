@@ -7,11 +7,16 @@
 
 import Foundation
 
-protocol SlideManagerProtocol {
+protocol SlideManagerProtocol: SlideColorful {
+    mutating func makeRect<T: Rectable>(by type: T.Type, photo: Data?)
     func changeAlpha(to alpha: Int)
-    func changeColor(to color: SKColor)
+
     func tapped(at point: SKPoint, center: SKPoint)
     
     var count: Int { get }
     subscript(i: Int) -> Rectable? { get }
+}
+
+protocol SlideColorful {
+    func changeColor(to color: SKColor)
 }
