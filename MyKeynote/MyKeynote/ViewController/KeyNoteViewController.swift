@@ -110,7 +110,7 @@ class KeyNoteViewController: UIViewController {
     }
     
     private func bind() {
-        NotificationCenter.default.addObserver(forName: .selectedRectChanged, object: nil, queue: nil, using: { [weak self] notification in
+        NotificationCenter.default.addObserver(forName: SlideManager.Notifications.selectedRectChanged, object: nil, queue: nil, using: { [weak self] notification in
             guard let self, let userInfo = notification.userInfo else { return }
             guard let selectedRect = userInfo["selectedRect"] as? Rectable else {
                 self.canvasView.deselect()
@@ -123,7 +123,7 @@ class KeyNoteViewController: UIViewController {
             controlStackView.bind(color: (selectedRect as? Colorful)?.color)
         })
         
-        NotificationCenter.default.addObserver(forName: .slideAlphaChanged, object: nil, queue: nil, using: { [weak self] notification in
+        NotificationCenter.default.addObserver(forName: SlideManager.Notifications.slideAlphaChanged, object: nil, queue: nil, using: { [weak self] notification in
             guard let self,
                   let userInfo = notification.userInfo,
                   let rect = userInfo["slide"] as? Rectable else { return }
@@ -131,7 +131,7 @@ class KeyNoteViewController: UIViewController {
             canvasView.changeAlpha(id: rect.id, to: CGFloat(Double(rect.alpha) / 10))
         })
         
-        NotificationCenter.default.addObserver(forName: .rectColorChanged, object: nil, queue: nil, using: { [weak self] notification in
+        NotificationCenter.default.addObserver(forName: SlideManager.Notifications.rectColorChanged, object: nil, queue: nil, using: { [weak self] notification in
             guard let self,
                   let userInfo = notification.userInfo,
                   let rect = userInfo["rect"] as? Rectable & Colorful else { return }
@@ -140,7 +140,7 @@ class KeyNoteViewController: UIViewController {
             canvasView.changeColor(id: rect.id, red: red, green: green, blue: blue)
         })
         
-        NotificationCenter.default.addObserver(forName: .squareMade, object: nil, queue: nil, using: { [weak self] notification in
+        NotificationCenter.default.addObserver(forName: SlideManager.Notifications.squareMade, object: nil, queue: nil, using: { [weak self] notification in
             guard let self,
                   let userInfo = notification.userInfo,
                   let rect = userInfo["slide"] as? Square,
@@ -155,7 +155,7 @@ class KeyNoteViewController: UIViewController {
             }
         })
         
-        NotificationCenter.default.addObserver(forName: .tableIndexChanged, object: nil, queue: nil, using: { [weak self] notification in
+        NotificationCenter.default.addObserver(forName: SlideManager.Notifications.tableIndexChanged, object: nil, queue: nil, using: { [weak self] notification in
             guard let self, let userInfo = notification.userInfo else { return }
             guard let displayId = userInfo["id"] as? SKID else {
                 self.canvasView.deselectSlide()
